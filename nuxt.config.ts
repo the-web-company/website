@@ -7,7 +7,6 @@ export default defineNuxtConfig({
   modules: ["@nuxt/content", "@nuxt/ui", "@nuxt/fonts", "@nuxtjs/sitemap", "nuxt-simple-robots"],
   runtimeConfig: {
     public: {
-      NUXT_PUBLIC_STUDIO_TOKENS: "9cade5b665b01239015afdbf9a2bd10f29717470d45e190cbe8cbf94ffb4a5f7",
       posthogPublicKey: "phc_XdInqLt3eIBMxaliR7MeKhJnQD0SOl0GIjhpIJCpsnA",
       posthogHost: "https://us.i.posthog.com",
     },
@@ -39,6 +38,9 @@ export default defineNuxtConfig({
     markdown: {
       remarkPlugins: ["remark-reading-time"],
     },
+  },
+  future: {
+    compatibilityVersion: 4,
   },
   site: {
     url: "https://thewebco.ai",
