@@ -20,15 +20,15 @@ const messages = [
           <span class="h-4 w-4 border-t-[15px] border-t-transparent border-r-[15px] border-r-purple-800 border-b-0 border-b-transparent bottom-0"></span>
           <p v-if="!message.length" class="p-2 bg-purple-800 text-purple-200 rounded-t-md rounded-br-md text-sm xl:text-base">{{ message.value }}</p>
           <div v-else-if="message.value && message.length" class="p-2 bg-purple-800 w-screen h-14 rounded-t-md rounded-br-md">
-            <div class="h-3 w-full bg-purple-600 rounded-md mb-3 group-hover:opacity-0 transition duration-500 ease-in-out"></div>
-            <div :class="[message.length, 'h-3 bg-purple-600 rounded-md group-hover:opacity-0 transition duration-500 ease-in-out']"></div>
+            <div class="h-3 w-full bg-purple-700 rounded-md mb-3 group-hover:opacity-0 transition duration-500 ease-in-out"></div>
+            <div :class="[message.length, 'h-3 bg-purple-700 rounded-md group-hover:opacity-0 transition duration-500 ease-in-out']"></div>
             <p class="text-purple-200 text-sm xl:text-base opacity-0 group-hover:opacity-100 transition duration-500 ease-in-out -translate-y-10">
               {{ message.value }}
             </p>
           </div>
           <div v-else class="p-2 bg-purple-800 w-screen h-14 rounded-t-md rounded-br-md">
-            <div class="h-3 w-full bg-purple-600 rounded-md mb-3"></div>
-            <div :class="[message.length, 'h-3 bg-purple-600 rounded-md']"></div>
+            <div class="h-3 w-full bg-purple-700 rounded-md mb-3"></div>
+            <div :class="[message.length, 'h-3 bg-purple-700 rounded-md']"></div>
           </div>
         </div>
       </div>

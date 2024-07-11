@@ -56,7 +56,7 @@ const person = {
         <section>
           <p class="font-medium text-sm">Phone</p>
           <UTooltip :text="item.type" v-for="(item, index) of person.phones" :key="index" class="block">
-            <div class="h-3 w-2/5 bg-purple-600 rounded-md group-hover:opacity-0 transition duration-500 ease-in-out"></div>
+            <div class="h-3 w-2/5 bg-purple-700 rounded-md group-hover:opacity-0 transition duration-500 ease-in-out"></div>
             <span class="absolute text-purple-400 text-xs transition duration-500 ease-in-out opacity-0 group-hover:opacity-100 -top-0.5">{{
               item.number
             }}</span>
@@ -74,13 +74,13 @@ const person = {
           <p class="font-medium text-sm">Email</p>
           <UTooltip :text="item.type" v-for="(item, index) of person.emails" :key="index" class="block relative">
             <div v-if="index == 0">
-              <div class="h-3 w-1/3 bg-purple-600 rounded-md mb-1 group-hover:opacity-0 transition duration-500 ease-in-out"></div>
+              <div class="h-3 w-1/3 bg-purple-700 rounded-md mb-1 group-hover:opacity-0 transition duration-500 ease-in-out"></div>
               <span class="absolute text-purple-400 text-xs transition duration-500 ease-in-out opacity-0 group-hover:opacity-100 -top-0.5">{{
                 item.address
               }}</span>
             </div>
             <div v-if="index == 1">
-              <div class="h-3 w-2/3 bg-purple-600 rounded-md group-hover:opacity-0 transition duration-500 ease-in-out"></div>
+              <div class="h-3 w-2/3 bg-purple-700 rounded-md group-hover:opacity-0 transition duration-500 ease-in-out"></div>
               <span class="absolute text-purple-400 text-xs transition duration-500 ease-in-out opacity-0 group-hover:opacity-100 -top-0.5">{{
                 item.address
               }}</span>
@@ -95,14 +95,14 @@ const person = {
 
         <section>
           <p class="font-medium text-sm">Locations</p>
-          <div class="h-3 w-2/3 bg-purple-600 rounded-md"></div>
+          <div class="h-3 w-2/3 bg-purple-700 rounded-md"></div>
         </section>
 
         <section>
           <p class="font-medium text-sm">Languages</p>
-          <div class="h-3 w-1/3 bg-purple-600 rounded-md mb-1"></div>
-          <div class="h-3 w-2/5 bg-purple-600 rounded-md mb-1"></div>
-          <div class="h-3 w-1/5 bg-purple-600 rounded-md"></div>
+          <div class="h-3 w-1/3 bg-purple-700 rounded-md mb-1"></div>
+          <div class="h-3 w-2/5 bg-purple-700 rounded-md mb-1"></div>
+          <div class="h-3 w-1/5 bg-purple-700 rounded-md"></div>
         </section>
       </div>
     </div>
@@ -110,8 +110,8 @@ const person = {
     <section class="px-4">
       <p class="font-medium text-sm">About</p>
       <div class="flex flex-col gap-2">
-        <div class="h-3 w-full bg-purple-600 rounded-md"></div>
-        <div class="h-3 w-1/4 bg-purple-600 rounded-md"></div>
+        <div class="h-3 w-full bg-purple-700 rounded-md"></div>
+        <div class="h-3 w-1/4 bg-purple-700 rounded-md"></div>
       </div>
     </section>
   </div>

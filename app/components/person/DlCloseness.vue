@@ -75,10 +75,10 @@ const currentTab = computed(() => {
 
         <ul class="h-56 divide-y divide-purple-700" v-if="localState[currentTab].length">
           <li v-if="currentTab == 'school'" class="flex p-2 md:py-4">
-            <div class="h-8 w-8 md:h-10 md:w-10 rounded-full bg-purple-800"></div>
+            <div class="h-8 w-8 md:h-10 md:w-10 rounded-full bg-purple-700"></div>
             <div class="ml-3 flex flex-col justify-center gap-1">
-              <div class="h-4 w-20 bg-purple-800 rounded-md"></div>
-              <div class="h-3 w-40 bg-purple-800 rounded-md hidden sm:block"></div>
+              <div class="h-4 w-20 bg-purple-700 rounded-md"></div>
+              <div class="h-3 w-40 bg-purple-700 rounded-md hidden sm:block"></div>
             </div>
           </li>
 
@@ -93,8 +93,8 @@ const currentTab = computed(() => {
           <li v-if="currentTab == 'users'" class="flex p-2 md:py-4" v-for="item of 2" :key="item">
             <div class="h-8 w-8 md:h-10 md:w-10 rounded-full bg-purple-800"></div>
             <div class="ml-3 flex flex-col justify-center gap-1">
-              <div class="h-4 w-20 bg-purple-800 rounded-md"></div>
-              <div class="h-3 w-40 bg-purple-800 rounded-md hidden sm:block"></div>
+              <div class="h-4 w-20 bg-purple-700 rounded-md"></div>
+              <div class="h-3 w-40 bg-purple-700 rounded-md hidden sm:block"></div>
             </div>
           </li>
         </ul>

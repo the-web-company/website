@@ -47,7 +47,7 @@ const menu = [
           </NuxtLink>
 
           <div class="flex space-x-6 items-center">
-            <NuxtLink href="https://twitter.com/the-web-company" target="_blank" class="text-purple-800 hover:text-purple-700">
+            <NuxtLink href="https://twitter.com/the-web-company" target="_blank" class="text-purple-400 hover:text-purple-600">
               <span class="sr-only">Twitter / X</span>
               <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 487.43 456.19">
                 <path
@@ -58,7 +58,7 @@ const menu = [
                 />
               </svg>
             </NuxtLink>
-            <NuxtLink href="https://www.linkedin.com/company/the-web-company" target="_blank" class="text-purple-800 hover:text-purple-700">
+            <NuxtLink href="https://www.linkedin.com/company/the-web-company" target="_blank" class="text-purple-400 hover:text-purple-600">
               <span class="sr-only">LinkedIn</span>
               <svg class="h-6 w-6" fill="currentColor" height="1em" viewBox="0 0 448 512" aria-hidden="true">
                 <path
@@ -66,7 +66,7 @@ const menu = [
                 />
               </svg>
             </NuxtLink>
-            <NuxtLink href="https://github.com/the-web-company" target="_blank" class="text-purple-800 hover:text-purple-700">
+            <NuxtLink href="https://github.com/the-web-company" target="_blank" class="text-purple-400 hover:text-purple-600">
               <span class="sr-only">GitHub</span>
               <svg class="h-7 w-7" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                 <path
@@ -76,7 +76,7 @@ const menu = [
                 />
               </svg>
             </NuxtLink>
-            <NuxtLink href="https://www.youtube.com/channel/the-web-company" target="_blank" class="text-purple-800 hover:text-purple-700">
+            <NuxtLink href="https://www.youtube.com/channel/the-web-company" target="_blank" class="text-purple-400 hover:text-purple-600">
               <span class="sr-only">YouTube</span>
               <svg class="h-9 w-9" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                 <path
