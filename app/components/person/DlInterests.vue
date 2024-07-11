@@ -31,7 +31,7 @@ const stopVideo = () => {
 </script>
 
 <template>
-  <div class="bg-purple-900 ring-1 ring-purple-700 rounded-md p-2 grid grid-rows-4 gap-2 h-full" @mouseover="startVideo" @mouseleave="stopVideo">
+  <div class="bg-purple-900 rounded-md p-2 grid grid-rows-4 gap-2 h-full" @mouseover="startVideo" @mouseleave="stopVideo">
     <div class="w-full h-full bg-purple-800 rounded-md"></div>
     <div class="w-full h-full bg-purple-700 rounded-md justify-between p-2 row-span-2 flex gap-2">
       <p class="text-sm xl:text-base">Have a active Formula 1 subscription</p>

@@ -12,7 +12,7 @@ const messages = [
 </script>
 
 <template>
-  <div class="group bg-purple-900 ring-1 ring-purple-700 rounded-md p-2 h-full">
+  <div class="group bg-purple-900 rounded-md p-2 h-full">
     <div class="flex flex-col h-full w-full justify-between gap-2">
       <div :class="[index > 3 ? 'hidden md:flex' : '', 'flex items-end']" v-for="(message, index) of messages" :key="index">
         <UAvatar src="/components/kristin-watson.webp" />

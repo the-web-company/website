@@ -3,15 +3,13 @@ import DlCta from "@/components/DlCta.vue";
 import DlPid from "@/components/use-cases/DlPid.vue";
 
 definePageMeta({ title: "Attribution | Use case" });
+const { data } = await useAsyncData("use-cases-attribution", () => queryContent("/use-cases/attribution").findOne());
 </script>
 
 <template>
   <div class="max-w-screen-2xl mx-auto px-4 3xl:px-0 flex flex-col justify-center items-center py-10 xl:py-14">
-    <h1 class="text-3xl sm:text-4xl xl:text-5xl font-semibold leading-8 text-center">
-      Recognize your visitors <br class="hidden lg:block" />
-      <span class="bg-clip-text text-transparent bg-gradient-to-r from-purple-500 to-rose-500">across all touchpoints</span>
-    </h1>
-    <h2 class="text-center text-purple-400 text-lg md:text-xl mt-4">A single solution for user attribution across the web that's just works.</h2>
+    <h1 class="text-3xl sm:text-4xl xl:text-5xl font-semibold leading-8 text-center" v-html="data.title"></h1>
+    <h2 class="text-center text-purple-400 text-lg md:text-xl mt-4">{{ data.subtitle }}</h2>
 
     <div class="flex items-center gap-4 mt-6">
       <UButton label="Request demo" to="https://calendar.app.google/i7EhNVG7Yt4KUnGP9" target="_blank" />
@@ -61,7 +59,7 @@ definePageMeta({ title: "Attribution | Use case" });
       >
         <UIcon name="i-heroicons-window" class="h-7 w-7 mb-2" />
         <h3 class="text-lg">Browser tampering</h3>
-        <p class="text-purple-400 text-sm">TheWebCo identifying tampering attempts and factors them in, providing a unique result every time..</p>
+        <p class="text-purple-400 text-sm">TheWebCo identifying tampering attempts and factors them in, providing a unique result every time.</p>
       </div>
     </div>
   </div>

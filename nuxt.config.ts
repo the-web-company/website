@@ -1,5 +1,3 @@
-import { resolve } from "path";
-
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   ssr: false,
@@ -27,13 +25,6 @@ export default defineNuxtConfig({
   content: {
     experimental: {
       clientDB: true,
-    },
-    sources: {
-      content: {
-        driver: "fs",
-        prefix: "/blog", // All contents inside this source will be prefixed with `/docs`
-        base: resolve(__dirname, "content"),
-      },
     },
     markdown: {
       remarkPlugins: ["remark-reading-time"],

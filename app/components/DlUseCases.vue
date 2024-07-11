@@ -27,8 +27,8 @@ const useCases = [
 
     <div class="sm:mx-8">
       <dl class="grid mx-auto sm:max-w-4xl grid-cols-1 gap-x-8 gap-y-10 md:gap-y-16 md:grid-cols-2 lg:max-w-none lg:grid-cols-3">
-        <div class="flex flex-col space-y-4 md:space-y-6" v-for="(item, index) of useCases" :key="index">
-          <div class="flex items-center justify-center rounded-md bg-purple-950 p-2 w-fit">
+        <div class="flex flex-col space-y-4 md:space-y-6 ring-1 ring-purple-700 bg-purple-900 p-4 rounded-md" v-for="(item, index) of useCases" :key="index">
+          <div class="flex items-center justify-center rounded-md bg-purple-800 p-2 w-fit">
             <UIcon :name="item.icon" class="bg-purple-400 h-6 w-6" />
           </div>
 
@@ -37,7 +37,7 @@ const useCases = [
             <p class="text-purple-400">{{ item.description }}</p>
           </div>
 
-          <NuxtLink class="text-purple-400 hover:text-purple-500" :to="item.to"> Learn more <span aria-hidden="true">→</span> </NuxtLink>
+          <NuxtLink class="text-purple-300 hover:text-purple-400" :to="item.to"> Learn more <span aria-hidden="true">→</span> </NuxtLink>
         </div>
       </dl>
     </div>

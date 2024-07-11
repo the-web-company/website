@@ -35,7 +35,7 @@ const person = {
 </script>
 
 <template>
-  <div class="group bg-purple-900 ring-1 ring-purple-700 rounded-md h-full">
+  <div class="group bg-purple-900 rounded-md h-full">
     <div class="relative">
       <img :src="person.cover_picture" class="rounded-tl-md rounded-tr-md w-full h-14 object-cover" />
       <img :src="person.profile_picture" class="rounded-full w-20 h-20 absolute top-6 left-10 ring-2 ring-purple-900" />

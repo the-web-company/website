@@ -21,21 +21,10 @@ export default defineAppConfig({
         //       "bg-transparent text-purple-900 dark:text-white ring-1 ring-inset ring-{color}-500 dark:ring-{color}-400 focus:ring-2 focus:ring-{color}-500 dark:focus:ring-{color}-400",
         //     none: "bg-transparent focus:ring-0 focus:shadow-none",
         //   },
-        //   default: {
-        //     size: "md",
-        //   },
       },
-      // textarea: {
-      //   color: {
-      //     white: {
-      //       outline:
-      //         "bg-purple-50 dark:bg-purple-900 text-purple-900 dark:text-white ring-1 ring-inset ring-purple-300 dark:ring-purple-700 focus:ring-2 focus:ring-primary-500 dark:focus:ring-primary-400",
-      //     },
-      //   },
-      //   variant: {
-      //     outline:
-      //       "transparent text-purple-900 dark:text-white ring-1 ring-inset ring-{color}-500 dark:ring-{color}-400 focus:ring-2 focus:ring-{color}-500 dark:focus:ring-{color}-400",
-      //   },
+      default: {
+        size: "md",
+      },
     },
     button: {
       default: {

@@ -26,7 +26,7 @@ const colors = [
 </script>
 
 <template>
-  <div class="group bg-purple-900 ring-1 ring-purple-700 rounded-md p-2 h-full">
+  <div class="group bg-purple-900 rounded-md p-2 h-full">
     <div class="h-full grid grid-rows-8 gap-2 mt-2">
       <div v-for="(day, dayIndex) of matrix" :key="dayIndex" class="grid grid-cols-12 h-full w-full">
         <span class="text-sm text-purple-400 flex justify-center items-center">{{ days[dayIndex] }}</span>

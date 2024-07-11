@@ -3,13 +3,14 @@ import DlAuthor from "@/components/blog/DlAuthor.vue";
 import DlHighlight from "@/components/blog/DlHighlight.vue";
 
 definePageMeta({ title: "Blog" });
+const { data } = await useAsyncData("blog", () => queryContent("/blog").findOne());
 
 const itemsPerPage = 10;
 const page = ref(1);
 const loading = ref(false);
 const selectedCategory = ref("all");
-const total = await queryContent("/blog").count();
-const allCategories = new Set((await queryContent("/blog").where({ published: true }).find()).map((post: Record<string, any>) => post.category));
+const total = await queryContent("/posts").count();
+const allCategories = new Set((await queryContent("/posts").where({ published: true }).find()).map((post: Record<string, any>) => post.category));
 let posts = ref([] as Array<any>);
 getPosts();
 
@@ -19,7 +20,7 @@ watch(page, () => {
 
 async function getPosts() {
   loading.value = true;
-  posts.value = await queryContent("/blog")
+  posts.value = await queryContent("/posts")
     .where({ published: true })
     .sort({ pubDate: -1 })
     .skip((page.value - 1) * itemsPerPage)
@@ -34,7 +35,7 @@ watch(selectedCategory, async () => {
     return getPosts();
   }
 
-  posts.value = await queryContent("/blog")
+  posts.value = await queryContent("/posts")
     .where({ category: { $match: selectedCategory.value }, published: true })
     .sort({ pubDate: -1 })
     .skip((page.value - 1) * itemsPerPage)
@@ -47,8 +48,8 @@ watch(selectedCategory, async () => {
 <template>
   <div class="max-w-screen-2xl mx-auto px-4 3xl:px-0 py-14">
     <div>
-      <h2 class="text-3xl sm:text-4xl xl:text-5xl">TheWebCo blog</h2>
-      <p class="mt-2 text-lg text-purple-400">Discover our latest articles, news, announcements, guides, tutorials, updates.</p>
+      <h2 class="text-3xl sm:text-4xl xl:text-5xl">{{ data.title }}</h2>
+      <p class="mt-2 text-lg text-purple-400">{{ data.subtitle }}</p>
     </div>
 
     <div class="mt-4" v-if="posts.length">

@@ -9,7 +9,7 @@ const data = [
 </script>
 
 <template>
-  <div class="group bg-purple-900 ring-1 ring-purple-700 rounded-md p-2">
+  <div class="group bg-purple-900 rounded-md p-2">
     <ul role="list" class="divide-y divide-purple-800 h-full">
       <li
         :class="[

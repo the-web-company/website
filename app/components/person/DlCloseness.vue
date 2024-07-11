@@ -55,7 +55,7 @@ const currentTab = computed(() => {
 </script>
 
 <template>
-  <div class="bg-purple-900 ring-1 ring-purple-700 rounded-md py-2 px-2 xl:px-6 2xl:px-8" @mouseover="localState.tab = 1" @mouseleave="localState.tab = 0">
+  <div class="bg-purple-900 rounded-md py-2 px-2 xl:px-6 2xl:px-8" @mouseover="localState.tab = 1" @mouseleave="localState.tab = 0">
     <div class="flex items-center justify-between w-full h-full">
       <div class="z-20 relative">
         <img :src="results.start.picture" class="w-14 h-14 sm:w-20 sm:h-20 md:w-28 md:h-28 3xl:w-32 3xl:h-32 rounded-full object-cover" />

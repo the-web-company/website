@@ -30,7 +30,7 @@ import DiVisitors from "@/components/platform/DiVisitors.vue";
     </div>
   </div>
 
-  <div class="bg-purple-800 px-4 3xl:px-0 py-10 xl:py-14">
+  <div class="px-4 3xl:px-0 py-10 xl:py-14">
     <DlAnonFeatures />
   </div>
 
@@ -45,10 +45,8 @@ import DiVisitors from "@/components/platform/DiVisitors.vue";
     <DlBentoGrid />
   </div>
 
-  <div class="bg-purple-900">
-    <div class="max-w-screen-2xl mx-auto space-y-8 px-4 3xl:px-0 py-14">
-      <DlUseCases />
-    </div>
+  <div class="max-w-screen-2xl mx-auto space-y-8 px-4 3xl:px-0 py-14">
+    <DlUseCases />
   </div>
 
   <!-- <div class="bg-violet-50 px-4 3xl:px-0 py-10 xl:py-14">
