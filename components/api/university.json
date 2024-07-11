@@ -1,0 +1,75 @@
+{
+  "_id": "6438917b5406967667d877d0",
+  "industry": ["Higher Education"],
+  "specialities": [
+    "higher education",
+    "research",
+    "teaching",
+    "natural sciences",
+    "social sciences",
+    "humanities",
+    "interdisciplinary research",
+    "engineering",
+    "business",
+    "medicine",
+    "law",
+    "k-12 education",
+    "earth science"
+  ],
+  "title": ["One of the world's leading research and teaching institutions."],
+  "sources": [
+    {
+      "id": "71969932",
+      "name": "stanford university",
+      "network": "linkedin",
+      "username": "the-web-company",
+      "url": "linkedin.com/company/the-web-company",
+      "description": "TheWebco's mission is to provide companies with the most insightful data on people.\nThe fusion of a revolutionary approach to data analysis allows our engine to glean insight from the web in order to fulfill a basic human need - getting to know people better. New leads are generated, prospects are qualified, trust is improved, and recruiting becomes much more professional.\n\n\nWho is using our platform?\n\nSalespeople - Generate qualified leads, get warm calling insights, acquire fresh data, and increase conversion rates.\n\nRecruiters - Get a pool of high-quality candidates sourced using robust skills analysis and friendly insights to break the ice.\n\nSenior Executives - Get an overview of your network and pre-meeting intelligence right to your inbox.\n\nFraud analysis - Gain more confidence and trust by using our database for identity verification and risk analysis."
+    },
+    {
+      "id": "6192688417",
+      "name": "stanford",
+      "network": "facebook",
+      "username": "",
+      "url": "facebook.com/Stanford/",
+      "description": "Stanford is a place of discovery, creativity and innovation."
+    },
+    {
+      "name": "stanford university",
+      "network": "twitter",
+      "username": "stanford",
+      "url": "twitter.com/stanford",
+      "description": "One of the world's leading research and teaching institutions. Official account of Stanford University.",
+      "following": 609,
+      "followers": 1027283
+    },
+    {
+      "name": "stanford",
+      "network": "instagram",
+      "username": "stanford",
+      "url": "instagram.com/stanford/",
+      "description": "One of the world’s leading research and teaching institutions. Accelerating solutions and educating students for lives of purposeful contribution.",
+      "following": 199,
+      "followers": 1182147
+    },
+    {
+      "name": "stanford",
+      "network": "youtube",
+      "username": "stanford",
+      "url": "youtube.com/stanford",
+      "description": "Stanford is a place of discovery, creativity and innovation located in the San Francisco Bay Area on the ancestral land of the Muwekma Ohlone Tribe. Dedicated to our founding mission—benefitting society through research and education—we are working toward a sustainable future, accelerating the impact of research with external partners, catalyzing discoveries about ourselves and our world, and educating students as global citizens. Our main campus, which welcomed its first class in 1891, is now home to 650+ student organizations, 36 varsity athletic teams, 20 libraries, 21 living Nobel laureates, 18 interdisciplinary research institutes, seven schools, and a vibrant arts scene. More than 9,000 graduate students and 7,000 undergraduates pursue studies at Stanford each year. Our financial aid program, one of the most generous in the nation, makes it possible for any admitted undergraduate to attend without taking on student debt. Learn more at stanford.edu.",
+      "created_at": "2006-09-19T00:00:00.000+00:00"
+    }
+  ],
+  "company_size": "15314",
+  "founded": "1891",
+  "url": "https://www.stanford.edu",
+  "locations": [
+    {
+      "address": "450 jane stanford way",
+      "state": "california",
+      "country": "united states",
+      "city": "stanford"
+    }
+  ]
+}

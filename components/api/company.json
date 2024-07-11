@@ -1,0 +1,47 @@
+{
+  "_id": "643bbc94531f363f3b2690b2",
+  "industry": [],
+  "specialities": ["artificial intelligence", "machine learning", "sales intelligence", "marketing intelligence", "hr intelligence", "vc intelligence"],
+  "title": ["The power of people intelligence at your fingertip. A 360-degree view to billions of people with deep, actionable insights 🚀"],
+  "sources": [
+    {
+      "id": "71969932",
+      "name": "TheWebCo",
+      "network": "linkedin",
+      "username": "the-web-company",
+      "url": "linkedin.com/company/the-web-company",
+      "description": "ThewebCo's mission is to provide companies with the most insightful data on people.\nThe fusion of a revolutionary approach to data analysis allows our engine to glean insight from the web in order to fulfill a basic human need - getting to know people better. New leads are generated, prospects are qualified, trust is improved, and recruiting becomes much more professional.\n\n\nWho is using our platform?\n\nSalespeople - Generate qualified leads, get warm calling insights, acquire fresh data, and increase conversion rates.\n\nRecruiters - Get a pool of high-quality candidates sourced using robust skills analysis and friendly insights to break the ice.\n\nSenior Executives - Get an overview of your network and pre-meeting intelligence right to your inbox.\n\nFraud analysis - Gain more confidence and trust by using our database for identity verification and risk analysis."
+    },
+    {
+      "name": "the-web-company",
+      "network": "twitter",
+      "username": "TheWebco",
+      "url": "twitter.com/the-web-company",
+      "description": "The power of people intelligence at your fingertip.\nA 360-degree view to billions of people with deep, actionable insights 🚀",
+      "following": 47,
+      "followers": 295472
+    },
+    {
+      "name": "TheWebCo",
+      "network": "github",
+      "username": "the-web-company",
+      "url": "github.com/the-web-company"
+    },
+    {
+      "name": "the-web-company",
+      "network": "youtube",
+      "username": "the-web-company",
+      "url": "youtube.com/channel/the-web-company",
+      "description": "Know more, know better, know faster."
+    }
+  ],
+  "company_size": 47,
+  "founded": 2024,
+  "url": "https://thewebco.ai",
+  "locations": [
+    {
+      "country": "israel",
+      "city": "tel aviv"
+    }
+  ]
+}
