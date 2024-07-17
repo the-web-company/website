@@ -47,7 +47,7 @@ const menu = [
           </NuxtLink>
 
           <div class="flex space-x-6 items-center">
-            <NuxtLink href="https://twitter.com/the-web-company" target="_blank" class="text-gray-400 hover:text-gray-600">
+            <NuxtLink href="https://x.com/thewebco_hq" target="_blank" class="text-gray-400 hover:text-gray-600">
               <span class="sr-only">Twitter / X</span>
               <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 487.43 456.19">
                 <path
