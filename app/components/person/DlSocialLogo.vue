@@ -13,7 +13,7 @@ defineProps({
     role="img"
     viewBox="0 0 24 24"
     xmlns="http://www.w3.org/2000/svg"
-    class="fill-purple-200 hover:fill-purple-300 h-8 w-8 transition duration-200"
+    class="fill-gray-500 hover:fill-gray-900 dark:fill-gray-400 dark:hover:fill-gray-300 h-8 w-8 transition duration-200"
   >
     <title>LinkedIn</title>
     <path
@@ -25,7 +25,7 @@ defineProps({
     role="img"
     viewBox="0 0 24 24"
     xmlns="http://www.w3.org/2000/svg"
-    class="fill-purple-200 hover:fill-purple-300 h-8 w-8 transition duration-200"
+    class="fill-gray-500 hover:fill-gray-900 dark:fill-gray-400 dark:hover:fill-gray-300 h-8 w-8 transition duration-200"
   >
     <title>Facebook</title>
     <path
@@ -37,7 +37,7 @@ defineProps({
     role="img"
     viewBox="0 0 24 24"
     xmlns="http://www.w3.org/2000/svg"
-    class="fill-purple-200 hover:fill-purple-300 h-8 w-8 transition duration-200"
+    class="fill-gray-500 hover:fill-gray-900 dark:fill-gray-400 dark:hover:fill-gray-300 h-8 w-8 transition duration-200"
   >
     <title>Twitter</title>
     <path
@@ -49,7 +49,7 @@ defineProps({
     role="img"
     viewBox="0 0 24 24"
     xmlns="http://www.w3.org/2000/svg"
-    class="fill-purple-200 hover:fill-purple-300 h-8 w-8 transition duration-200"
+    class="fill-gray-500 hover:fill-gray-900 dark:fill-gray-400 dark:hover:fill-gray-300 h-8 w-8 transition duration-200"
   >
     <title>Instagram</title>
     <path
@@ -59,19 +59,19 @@ defineProps({
   <UIcon
     v-else-if="name == 'truecaller'"
     name="i-heroicons-phone"
-    class="text-neutral-500 hover:text-neutral-900 dark:text-neutral-400 dark:hover:text-neutral-300 h-8 w-8 transition duration-200"
+    class="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 h-8 w-8 transition duration-200"
   ></UIcon>
   <UIcon
     v-else-if="name == 'me'"
     name="i-heroicons-phone"
-    class="text-neutral-500 hover:text-neutral-900 dark:text-neutral-400 dark:hover:text-neutral-300 h-8 w-8 transition duration-200"
+    class="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 h-8 w-8 transition duration-200"
   ></UIcon>
   <svg
     v-else-if="name == 'github'"
     role="img"
     viewBox="0 0 24 24"
     xmlns="http://www.w3.org/2000/svg"
-    class="fill-purple-200 hover:fill-purple-300 h-8 w-8 transition duration-200"
+    class="fill-gray-500 hover:fill-gray-900 dark:fill-gray-400 dark:hover:fill-gray-300 h-8 w-8 transition duration-200"
   >
     <title>GitHub</title>
     <path
@@ -83,7 +83,7 @@ defineProps({
     role="img"
     viewBox="0 0 24 24"
     xmlns="http://www.w3.org/2000/svg"
-    class="fill-purple-200 hover:fill-purple-300 h-8 w-8 transition duration-200"
+    class="fill-gray-500 hover:fill-gray-900 dark:fill-gray-400 dark:hover:fill-gray-300 h-8 w-8 transition duration-200"
   >
     <title>Crunchbase</title>
     <path
@@ -95,7 +95,7 @@ defineProps({
     role="img"
     viewBox="0 0 24 24"
     xmlns="http://www.w3.org/2000/svg"
-    class="fill-purple-200 hover:fill-purple-300 h-8 w-8 transition duration-200"
+    class="fill-gray-500 hover:fill-gray-900 dark:fill-gray-400 dark:hover:fill-gray-300 h-8 w-8 transition duration-200"
   >
     <title>Meetup</title>
     <path
@@ -107,7 +107,7 @@ defineProps({
     role="img"
     viewBox="0 0 24 24"
     xmlns="http://www.w3.org/2000/svg"
-    class="fill-purple-200 hover:fill-purple-300 h-8 w-8 transition duration-200"
+    class="fill-gray-500 hover:fill-gray-900 dark:fill-gray-400 dark:hover:fill-gray-300 h-8 w-8 transition duration-200"
   >
     <title>Flickr</title>
     <path
@@ -119,7 +119,7 @@ defineProps({
     role="img"
     viewBox="0 0 24 24"
     xmlns="http://www.w3.org/2000/svg"
-    class="fill-purple-200 hover:fill-purple-300 h-8 w-8 transition duration-200"
+    class="fill-gray-500 hover:fill-gray-900 dark:fill-gray-400 dark:hover:fill-gray-300 h-8 w-8 transition duration-200"
   >
     <title>Quora</title>
     <path
@@ -131,7 +131,7 @@ defineProps({
     role="img"
     viewBox="0 0 24 24"
     xmlns="http://www.w3.org/2000/svg"
-    class="fill-purple-200 hover:fill-purple-300 h-8 w-8 transition duration-200"
+    class="fill-gray-500 hover:fill-gray-900 dark:fill-gray-400 dark:hover:fill-gray-300 h-8 w-8 transition duration-200"
   >
     <title>Myspace</title>
     <path
@@ -143,7 +143,7 @@ defineProps({
     role="img"
     viewBox="0 0 24 24"
     xmlns="http://www.w3.org/2000/svg"
-    class="fill-purple-200 hover:fill-purple-300 h-8 w-8 transition duration-200"
+    class="fill-gray-500 hover:fill-gray-900 dark:fill-gray-400 dark:hover:fill-gray-300 h-8 w-8 transition duration-200"
   >
     <title>YouTube</title>
     <path
@@ -155,7 +155,7 @@ defineProps({
     role="img"
     viewBox="0 0 24 24"
     xmlns="http://www.w3.org/2000/svg"
-    class="fill-purple-200 hover:fill-purple-300 h-8 w-8 transition duration-200"
+    class="fill-gray-500 hover:fill-gray-900 dark:fill-gray-400 dark:hover:fill-gray-300 h-8 w-8 transition duration-200"
   >
     <title>Dribbble</title>
     <path
@@ -167,7 +167,7 @@ defineProps({
     role="img"
     viewBox="0 0 24 24"
     xmlns="http://www.w3.org/2000/svg"
-    class="fill-purple-200 hover:fill-purple-300 h-8 w-8 transition duration-200"
+    class="fill-gray-500 hover:fill-gray-900 dark:fill-gray-400 dark:hover:fill-gray-300 h-8 w-8 transition duration-200"
   >
     <title>About.me</title>
     <path
@@ -179,7 +179,7 @@ defineProps({
     role="img"
     viewBox="0 0 24 24"
     xmlns="http://www.w3.org/2000/svg"
-    class="fill-purple-200 hover:fill-purple-300 h-8 w-8 transition duration-200"
+    class="fill-gray-500 hover:fill-gray-900 dark:fill-gray-400 dark:hover:fill-gray-300 h-8 w-8 transition duration-200"
   >
     <title>AngelList</title>
     <path
@@ -191,7 +191,7 @@ defineProps({
     role="img"
     viewBox="0 0 24 24"
     xmlns="http://www.w3.org/2000/svg"
-    class="fill-purple-200 hover:fill-purple-300 h-8 w-8 transition duration-200"
+    class="fill-gray-500 hover:fill-gray-900 dark:fill-gray-400 dark:hover:fill-gray-300 h-8 w-8 transition duration-200"
   >
     <title>Foursquare</title>
     <path
@@ -203,7 +203,7 @@ defineProps({
     role="img"
     viewBox="0 0 24 24"
     xmlns="http://www.w3.org/2000/svg"
-    class="fill-purple-200 hover:fill-purple-300 h-8 w-8 transition duration-200"
+    class="fill-gray-500 hover:fill-gray-900 dark:fill-gray-400 dark:hover:fill-gray-300 h-8 w-8 transition duration-200"
   >
     <title>Gravatar</title>
     <path
@@ -215,7 +215,7 @@ defineProps({
     role="img"
     viewBox="0 0 24 24"
     xmlns="http://www.w3.org/2000/svg"
-    class="fill-purple-200 hover:fill-purple-300 h-8 w-8 transition duration-200"
+    class="fill-gray-500 hover:fill-gray-900 dark:fill-gray-400 dark:hover:fill-gray-300 h-8 w-8 transition duration-200"
   >
     <title>Keystone</title>
     <path
@@ -227,7 +227,7 @@ defineProps({
     role="img"
     viewBox="0 0 24 24"
     xmlns="http://www.w3.org/2000/svg"
-    class="fill-purple-200 hover:fill-purple-300 h-8 w-8 transition duration-200"
+    class="fill-gray-500 hover:fill-gray-900 dark:fill-gray-400 dark:hover:fill-gray-300 h-8 w-8 transition duration-200"
   >
     <title>Pinterest</title>
     <path
@@ -239,7 +239,7 @@ defineProps({
     role="img"
     viewBox="0 0 24 24"
     xmlns="http://www.w3.org/2000/svg"
-    class="fill-purple-200 hover:fill-purple-300 h-8 w-8 transition duration-200"
+    class="fill-gray-500 hover:fill-gray-900 dark:fill-gray-400 dark:hover:fill-gray-300 h-8 w-8 transition duration-200"
   >
     <title>Vimeo</title>
     <path
@@ -251,7 +251,7 @@ defineProps({
     role="img"
     viewBox="0 0 24 24"
     xmlns="http://www.w3.org/2000/svg"
-    class="fill-purple-200 hover:fill-purple-300 h-8 w-8 transition duration-200"
+    class="fill-gray-500 hover:fill-gray-900 dark:fill-gray-400 dark:hover:fill-gray-300 h-8 w-8 transition duration-200"
   >
     <title>Google</title>
     <path
@@ -263,7 +263,7 @@ defineProps({
     role="img"
     viewBox="0 0 24 24"
     xmlns="http://www.w3.org/2000/svg"
-    class="fill-purple-200 hover:fill-purple-300 h-8 w-8 transition duration-200"
+    class="fill-gray-500 hover:fill-gray-900 dark:fill-gray-400 dark:hover:fill-gray-300 h-8 w-8 transition duration-200"
   >
     <title>WordPress</title>
     <path
@@ -275,7 +275,7 @@ defineProps({
     role="img"
     viewBox="0 0 24 24"
     xmlns="http://www.w3.org/2000/svg"
-    class="fill-purple-200 hover:fill-purple-300 h-8 w-8 transition duration-200"
+    class="fill-gray-500 hover:fill-gray-900 dark:fill-gray-400 dark:hover:fill-gray-300 h-8 w-8 transition duration-200"
   >
     <title>Reddit</title>
     <path
@@ -287,7 +287,7 @@ defineProps({
     role="img"
     viewBox="0 0 24 24"
     xmlns="http://www.w3.org/2000/svg"
-    class="fill-purple-200 hover:fill-purple-300 h-8 w-8 transition duration-200"
+    class="fill-gray-500 hover:fill-gray-900 dark:fill-gray-400 dark:hover:fill-gray-300 h-8 w-8 transition duration-200"
   >
     <title>SoundCloud</title>
     <path
@@ -299,7 +299,7 @@ defineProps({
     role="img"
     viewBox="0 0 24 24"
     xmlns="http://www.w3.org/2000/svg"
-    class="fill-purple-200 hover:fill-purple-300 h-8 w-8 transition duration-200"
+    class="fill-gray-500 hover:fill-gray-900 dark:fill-gray-400 dark:hover:fill-gray-300 h-8 w-8 transition duration-200"
   >
     <title>Behance</title>
     <path
@@ -311,7 +311,7 @@ defineProps({
     role="img"
     viewBox="0 0 24 24"
     xmlns="http://www.w3.org/2000/svg"
-    class="fill-purple-200 hover:fill-purple-300 h-8 w-8 transition duration-200"
+    class="fill-gray-500 hover:fill-gray-900 dark:fill-gray-400 dark:hover:fill-gray-300 h-8 w-8 transition duration-200"
   >
     <title>Stack Overflow</title>
     <path
@@ -323,7 +323,7 @@ defineProps({
     role="img"
     viewBox="0 0 24 24"
     xmlns="http://www.w3.org/2000/svg"
-    class="fill-purple-200 hover:fill-purple-300 h-8 w-8 transition duration-200"
+    class="fill-gray-500 hover:fill-gray-900 dark:fill-gray-400 dark:hover:fill-gray-300 h-8 w-8 transition duration-200"
   >
     <title>Xing</title>
     <path
@@ -335,7 +335,7 @@ defineProps({
     role="img"
     viewBox="0 0 24 24"
     xmlns="http://www.w3.org/2000/svg"
-    class="fill-purple-200 hover:fill-purple-300 h-8 w-8 transition duration-200"
+    class="fill-gray-500 hover:fill-gray-900 dark:fill-gray-400 dark:hover:fill-gray-300 h-8 w-8 transition duration-200"
   >
     <title>Indeed</title>
     <path
@@ -347,7 +347,7 @@ defineProps({
     role="img"
     viewBox="0 0 24 24"
     xmlns="http://www.w3.org/2000/svg"
-    class="fill-purple-200 hover:fill-purple-300 h-8 w-8 transition duration-200"
+    class="fill-gray-500 hover:fill-gray-900 dark:fill-gray-400 dark:hover:fill-gray-300 h-8 w-8 transition duration-200"
   >
     <title>GitLab</title>
     <path
@@ -360,7 +360,7 @@ defineProps({
     width="48"
     height="48"
     viewBox="0 0 48 48"
-    class="fill-purple-200 hover:fill-purple-300 h-8 w-8 transition duration-200"
+    class="fill-gray-500 hover:fill-gray-900 dark:fill-gray-400 dark:hover:fill-gray-300 h-8 w-8 transition duration-200"
   >
     <rect width="11.188" height="14.476" x="6.999" y="18.918" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" rx="5.594" />
     <path
@@ -396,7 +396,7 @@ defineProps({
   </svg>
   <svg
     v-else-if="name == 'telegram'"
-    class="fill-purple-200 hover:fill-purple-300 h-8 w-8 transition duration-200"
+    class="fill-gray-500 hover:fill-gray-900 dark:fill-gray-400 dark:hover:fill-gray-300 h-8 w-8 transition duration-200"
     xmlns="http://www.w3.org/2000/svg"
     width="24"
     height="24"
@@ -408,7 +408,7 @@ defineProps({
   </svg>
   <svg
     v-else-if="name == 'icq'"
-    class="fill-purple-200 hover:fill-purple-300 h-8 w-8 transition duration-200"
+    class="fill-gray-500 hover:fill-gray-900 dark:fill-gray-400 dark:hover:fill-gray-300 h-8 w-8 transition duration-200"
     xmlns="http://www.w3.org/2000/svg"
     width="24"
     height="24"
@@ -420,7 +420,7 @@ defineProps({
   </svg>
   <svg
     v-else-if="name == 'goodreads'"
-    class="fill-purple-200 hover:fill-purple-300 h-8 w-8 transition duration-200"
+    class="fill-gray-500 hover:fill-gray-900 dark:fill-gray-400 dark:hover:fill-gray-300 h-8 w-8 transition duration-200"
     xmlns="http://www.w3.org/2000/svg"
     width="24"
     height="24"
@@ -432,7 +432,7 @@ defineProps({
   </svg>
   <svg
     v-else-if="name == 'deezer'"
-    class="fill-purple-200 hover:fill-purple-300 h-8 w-8 transition duration-200"
+    class="fill-gray-500 hover:fill-gray-900 dark:fill-gray-400 dark:hover:fill-gray-300 h-8 w-8 transition duration-200"
     xmlns="http://www.w3.org/2000/svg"
     width="24"
     height="24"
@@ -444,7 +444,7 @@ defineProps({
   </svg>
   <svg
     v-else-if="name == 'garminconnect'"
-    class="fill-purple-200 hover:fill-purple-300 h-8 w-8 transition duration-200"
+    class="fill-gray-500 hover:fill-gray-900 dark:fill-gray-400 dark:hover:fill-gray-300 h-8 w-8 transition duration-200"
     xmlns="http://www.w3.org/2000/svg"
     width="24"
     height="24"
@@ -456,7 +456,7 @@ defineProps({
   </svg>
   <svg
     v-else-if="name == 'fitbit'"
-    class="fill-purple-200 hover:fill-purple-300 h-8 w-8 transition duration-200"
+    class="fill-gray-500 hover:fill-gray-900 dark:fill-gray-400 dark:hover:fill-gray-300 h-8 w-8 transition duration-200"
     xmlns="http://www.w3.org/2000/svg"
     width="24"
     height="24"
@@ -468,7 +468,7 @@ defineProps({
   </svg>
   <svg
     v-else-if="name == 'myfitnesspal'"
-    class="fill-purple-200 hover:fill-purple-300 h-8 w-8 transition duration-200"
+    class="fill-gray-500 hover:fill-gray-900 dark:fill-gray-400 dark:hover:fill-gray-300 h-8 w-8 transition duration-200"
     xmlns="http://www.w3.org/2000/svg"
     width="48"
     height="48"
@@ -485,7 +485,7 @@ defineProps({
   </svg>
   <svg
     v-else-if="name == 'vivino'"
-    class="fill-purple-200 hover:fill-purple-300 h-8 w-8 transition duration-200"
+    class="fill-gray-500 hover:fill-gray-900 dark:fill-gray-400 dark:hover:fill-gray-300 h-8 w-8 transition duration-200"
     xmlns="http://www.w3.org/2000/svg"
     width="24"
     height="24"
@@ -497,7 +497,7 @@ defineProps({
   </svg>
   <svg
     v-else-if="name == 'adidas'"
-    class="fill-purple-200 hover:fill-purple-300 h-8 w-8 transition duration-200"
+    class="fill-gray-500 hover:fill-gray-900 dark:fill-gray-400 dark:hover:fill-gray-300 h-8 w-8 transition duration-200"
     xmlns="http://www.w3.org/2000/svg"
     width="24"
     height="24"
@@ -509,7 +509,7 @@ defineProps({
   </svg>
   <svg
     v-else-if="name == 'runkeeper'"
-    class="fill-purple-200 hover:fill-purple-300 h-8 w-8 transition duration-200"
+    class="fill-gray-500 hover:fill-gray-900 dark:fill-gray-400 dark:hover:fill-gray-300 h-8 w-8 transition duration-200"
     xmlns="http://www.w3.org/2000/svg"
     width="24"
     height="24"
@@ -521,7 +521,7 @@ defineProps({
   </svg>
   <svg
     v-else-if="name == 'ask.fm'"
-    class="fill-purple-200 hover:fill-purple-300 h-8 w-8 transition duration-200"
+    class="fill-gray-500 hover:fill-gray-900 dark:fill-gray-400 dark:hover:fill-gray-300 h-8 w-8 transition duration-200"
     xmlns="http://www.w3.org/2000/svg"
     width="24"
     height="24"
@@ -533,7 +533,7 @@ defineProps({
   </svg>
   <svg
     v-else-if="name == 'airbnb'"
-    class="fill-purple-200 hover:fill-purple-300 h-8 w-8 transition duration-200"
+    class="fill-gray-500 hover:fill-gray-900 dark:fill-gray-400 dark:hover:fill-gray-300 h-8 w-8 transition duration-200"
     enable-background="new 0 0 1991.3 2143.2"
     viewBox="0 0 1991.3 2143.2"
     xmlns="http://www.w3.org/2000/svg"
@@ -544,7 +544,7 @@ defineProps({
   </svg>
   <svg
     v-else-if="name == 'odnoklassniki'"
-    class="fill-purple-200 hover:fill-purple-300 h-8 w-8 transition duration-200"
+    class="fill-gray-500 hover:fill-gray-900 dark:fill-gray-400 dark:hover:fill-gray-300 h-8 w-8 transition duration-200"
     xmlns="http://www.w3.org/2000/svg"
     width="2500"
     height="2500"
@@ -558,7 +558,7 @@ defineProps({
   </svg>
   <svg
     v-else-if="name == 'skype'"
-    class="fill-purple-200 hover:fill-purple-300 h-8 w-8 transition duration-200"
+    class="fill-gray-500 hover:fill-gray-900 dark:fill-gray-400 dark:hover:fill-gray-300 h-8 w-8 transition duration-200"
     xmlns="http://www.w3.org/2000/svg"
     viewBox="0 0 448 512"
   >

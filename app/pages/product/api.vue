@@ -10,12 +10,12 @@ definePageMeta({ title: "API" });
 <template>
   <div class="max-w-screen-2xl mx-auto px-4 3xl:px-0 flex flex-col justify-center items-center py-10 xl:py-14">
     <h1 class="text-3xl sm:text-4xl xl:text-5xl font-semibold leading-tight text-center">
-      The single source of <br class="hidden lg:block" /><span class="bg-clip-text text-transparent bg-gradient-to-r from-purple-500 to-rose-500"
+      The single source of <br class="hidden lg:block" /><span class="bg-clip-text text-transparent bg-gradient-to-r from-primary-800 to-primary-200"
         >people intelligence</span
       >
       for B2B
     </h1>
-    <h2 class="text-center text-purple-400 text-lg md:text-xl mt-4">
+    <h2 class="text-center text-gray-500 text-lg md:text-xl mt-4">
       A 360-degree view to billions of people with deep, actionable insights. Experience growth like you never seen before.
     </h2>
 
@@ -32,29 +32,29 @@ definePageMeta({ title: "API" });
   <div class="max-w-screen-2xl mx-auto px-4 3xl:px-0 py-14 grid-cols-1 sm:grid-cols-2 grid lg:grid-cols-3 gap-x-6 gap-y-10 lg:gap-x-8 lg:gap-y-16">
     <div>
       <h3 class="flex items-center gap-1 font-semibold"><UIcon name="i-heroicons-user-group" class="h-6 w-6 text-primary-500" />2B+ people.</h3>
-      <p class="text-purple-400">We don't count profiles, we count people. Every person result contains it's full record fields.</p>
+      <p class="text-gray-500">We don't count profiles, we count people. Every person result contains it's full record fields.</p>
     </div>
     <div>
       <h3 class="flex items-center gap-1 font-semibold"><UIcon name="i-heroicons-identification" class="h-6 w-6 text-primary-500" />Contact enrichment.</h3>
-      <p class="text-purple-400">The freshest and most accurate data on the planet. Get yourself the quality data you deserve.</p>
+      <p class="text-gray-500">The freshest and most accurate data on the planet. Get yourself the quality data you deserve.</p>
     </div>
     <div>
       <h3 class="flex items-center gap-1 font-semibold"><UIcon name="i-heroicons-light-bulb" class="h-6 w-6 text-primary-500" />Social insights.</h3>
-      <p class="text-purple-400">A 360-degree view with deep, actionable insights like you never dared to dream of.</p>
+      <p class="text-gray-500">A 360-degree view with deep, actionable insights like you never dared to dream of.</p>
     </div>
     <div>
       <h3 class="flex items-center gap-1 font-semibold">
         <UIcon name="i-heroicons-presentation-chart-line" class="h-6 w-6 text-primary-500" /> Professional insights.
       </h3>
-      <p class="text-purple-400">The insights you want. Those you didn't know you needed and the ones you wouldn't thought are possible.</p>
+      <p class="text-gray-500">The insights you want. Those you didn't know you needed and the ones you wouldn't thought are possible.</p>
     </div>
     <div>
       <h3 class="flex items-center gap-1 font-semibold"><UIcon name="i-heroicons-code-bracket-square" class="h-6 w-6 text-primary-500" />Powerful API.</h3>
-      <p class="text-purple-400">A true search engine for people. With powerful filtering and query operators for amazing accuracy.</p>
+      <p class="text-gray-500">A true search engine for people. With powerful filtering and query operators for amazing accuracy.</p>
     </div>
     <div>
       <h3 class="flex items-center gap-1 font-semibold"><UIcon name="i-heroicons-currency-dollar" class="h-6 w-6 text-primary-500" />Pay per value.</h3>
-      <p class="text-purple-400">Fixed price, pay per match, define match strictness and required fields, no upfront fee, no commitment.</p>
+      <p class="text-gray-500">Fixed price, pay per match, define match strictness and required fields, no upfront fee, no commitment.</p>
     </div>
   </div>
 
@@ -78,23 +78,23 @@ definePageMeta({ title: "API" });
     <div class="lg:pr-8 lg:pt-4">
       <div class="lg:max-w-lg space-y-2">
         <h3 class="text-3xl xl:text-4xl">Welcome to the age of intelligence</h3>
-        <p class="text-purple-400 text-sm xl:text-base">
+        <p class="text-gray-500 text-sm xl:text-base">
           We built a production-ready people data source, at scale and with global coverage, so you don't need to.
         </p>
 
-        <dl class="py-4 max-w-xl space-y-8 text-base leading-7 text-purple-400 lg:max-w-none">
+        <dl class="py-4 max-w-xl space-y-8 text-base leading-7 text-gray-500 lg:max-w-none">
           <div class="flex gap-2">
-            <div><UIcon name="i-heroicons-magnifying-glass" class="h-6 w-6 text-purple-400" /></div>
-            <p><span class="font-semibold text-purple-200">Search</span> every paramter with advanced filtering and query operators for amazing accuracy.</p>
+            <div><UIcon name="i-heroicons-magnifying-glass" class="h-6 w-6 text-primary-500" /></div>
+            <p><span class="font-semibold text-primary-500">Search</span> every paramter with advanced filtering and query operators for amazing accuracy.</p>
           </div>
           <div class="flex gap-2">
-            <div><UIcon name="i-heroicons-code-bracket-square" class="h-6 w-6 text-purple-400" /></div>
-            <p><span class="font-semibold text-purple-200">Simple</span> RESTful API with easy to use playground to help you get started quickly.</p>
+            <div><UIcon name="i-heroicons-code-bracket-square" class="h-6 w-6 text-primary-500" /></div>
+            <p><span class="font-semibold text-primary-500">Simple</span> RESTful API with easy to use playground to help you get started quickly.</p>
           </div>
           <div class="flex gap-2">
-            <div><UIcon name="i-heroicons-identification" class="h-6 w-6 text-purple-400" /></div>
+            <div><UIcon name="i-heroicons-identification" class="h-6 w-6 text-primary-500" /></div>
             <p>
-              <span class="font-semibold text-purple-200">No tricks</span> with multiple endpoints, one endpoint for every entity, get the whole data in a
+              <span class="font-semibold text-primary-500">No tricks</span> with multiple endpoints, one endpoint for every entity, get the whole data in a
               single request.
             </p>
           </div>

@@ -31,23 +31,23 @@ let navigation = [
 </script>
 
 <template>
-  <div class="h-full w-full flex ring-1 ring-purple-900 rounded-md">
-    <div class="w-fit flex flex-col bg-purple-950 rounded-l-md">
+  <div class="h-full w-full flex ring-1 ring-gray-200 rounded-md">
+    <div class="w-fit flex flex-col bg-gray-50 rounded-l-md">
       <div class="flex items-center mx-auto pt-2 pb-4">
-        <UIcon name="i-heroicons-globe-alt" class="h-8 w-8 text-rose-50" />
+        <UIcon name="i-heroicons-globe-alt" class="h-8 w-8" />
       </div>
       <nav class="flex-1">
         <span v-for="(item, index) in navigation" :key="index">
           <div
             v-if="!item.items"
             :class="[
-              item.label == selected.label ? 'bg-rose-500 text-rose-50' : 'hover:bg-rose-500 hover:text-rose-50',
+              item.label == selected.label ? 'bg-primary-500 text-gray-900' : 'hover:bg-primary-500 hover:text-primary-50',
               'group flex items-center mx-1 md:mx-2 lg:mx-4 my-1 rounded-md p-2 cursor-pointer',
             ]"
           >
             <UIcon
               :name="item.icon"
-              :class="[item.label == selected.label ? 'text-rose-50' : 'text-rose-200', 'w-4 h-4 sm:w-5 sm:h-5 group-hover:text-rose-50']"
+              :class="[item.label == selected.label ? 'text-primary-500' : 'text-gray-900', 'w-4 h-4 sm:w-5 sm:h-5 group-hover:text-primary-50']"
             />
           </div>
           <div v-else class="py-2">
@@ -55,13 +55,13 @@ let navigation = [
               v-for="(itemRoute, indexRoute) of item.items"
               :key="indexRoute"
               :class="[
-                itemRoute.label == selected.label ? 'bg-rose-500 text-rose-50' : 'hover:bg-rose-500 hover:text-rose-50',
+                itemRoute.label == selected.label ? 'bg-primary-500 text-gray-900' : 'hover:bg-primary-500 hover:text-primary-50',
                 'group flex items-center mx-1 md:mx-2 lg:mx-4 my-1 rounded-md p-2 cursor-pointer',
               ]"
             >
               <UIcon
                 :name="itemRoute.icon"
-                :class="[itemRoute.label == selected.label ? 'text-rose-50' : 'text-rose-200', 'w-4 h-4 sm:w-5 sm:h-5 group-hover:text-rose-50']"
+                :class="[itemRoute.label == selected.label ? 'text-primary-50' : 'text-gray-900', 'w-4 h-4 sm:w-5 sm:h-5 group-hover:text-primary-50']"
               />
             </div>
           </div>
@@ -76,7 +76,7 @@ let navigation = [
       </div>
     </div>
 
-    <div class="min-h-full flex flex-col flex-1 bg-purple-950 rounded-r-md">
+    <div class="min-h-full flex flex-col flex-1 bg-gray-50 rounded-r-md">
       <main class="p-2 flex-1 min-h-full mx-auto w-full">
         <slot />
       </main>

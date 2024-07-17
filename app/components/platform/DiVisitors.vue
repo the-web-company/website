@@ -21,16 +21,16 @@ const matrix = [
 ];
 
 const colors = [
-  "bg-rose-100",
-  "bg-rose-200",
-  "bg-rose-300",
-  "bg-rose-400",
-  "bg-rose-500",
-  "bg-rose-600",
-  "bg-rose-700",
-  "bg-rose-800",
-  "bg-rose-900",
-  "bg-rose-950",
+  "bg-primary-100",
+  "bg-primary-200",
+  "bg-primary-300",
+  "bg-primary-400",
+  "bg-primary-500",
+  "bg-primary-600",
+  "bg-primary-700",
+  "bg-primary-800",
+  "bg-primary-900",
+  "bg-primary-950",
 ];
 
 const companies = [
@@ -115,11 +115,11 @@ const people = [
     <UCard v-for="(item, index) of highLevelStats" :key="index" :ui="{ body: { padding: '!px-3 !py-4' } }" :class="[index > 1 ? 'hidden sm:block' : '']">
       <div class="flex gap-2 items-center">
         <div class="px-2 py-1">
-          <UIcon :name="item.icon" class="md:h-6 md:w-6 text-purple-400" />
+          <UIcon :name="item.icon" class="md:h-6 md:w-6 text-gray-500" />
         </div>
 
         <div class="flex flex-col justify-around">
-          <h3 class="text-sm text-purple-400">{{ item.label }}</h3>
+          <h3 class="text-sm text-gray-500">{{ item.label }}</h3>
           <p class="text-xl font-medium">{{ item.value }}</p>
         </div>
       </div>
@@ -133,7 +133,7 @@ const people = [
 
         <div class="h-full grid grid-rows-8 gap-1 mt-1">
           <div v-for="(day, dayIndex) of matrix" :key="dayIndex" class="grid grid-cols-12 h-full w-full">
-            <span class="text-xs text-purple-400 flex justify-center items-center">{{ days[dayIndex] }}</span>
+            <span class="text-xs text-gray-500 flex justify-center items-center">{{ days[dayIndex] }}</span>
 
             <div class="col-span-11 w-full grid grid-cols-12 gap-1">
               <UTooltip :text="`${hour}`" v-for="(hour, hourIndex) of day" :key="hourIndex" :class="[colors[hour], 'rounded-md']">
@@ -146,7 +146,7 @@ const people = [
             <span></span>
 
             <div class="col-span-11 grid grid-cols-12 gap-1">
-              <span v-for="(hour, index) of hours" :key="index" class="text-xs text-purple-400 flex justify-center items-center">
+              <span v-for="(hour, index) of hours" :key="index" class="text-xs text-gray-500 flex justify-center items-center">
                 {{ hour }}
               </span>
             </div>
@@ -160,17 +160,17 @@ const people = [
         <div class="h-full flex flex-col">
           <h2 class="font-medium">Companies</h2>
 
-          <div class="mt-2 divide-y divide-purple-700 flex flex-col">
-            <div v-for="(company, index) of companies" :key="index" class="grid grid-cols-8 p-2 hover:bg-purple-950 cursor-pointer">
+          <div class="mt-2 divide-y divide-gray-300 flex flex-col">
+            <div v-for="(company, index) of companies" :key="index" class="grid grid-cols-8 p-2 hover:bg-gray-50 cursor-pointer">
               <div class="flex items-center gap-4 col-span-5">
                 <UAvatar :src="company.profile_image" :alt="company.name" />
                 <div class="flex flex-col justify-around">
                   <h3 class="text-sm">{{ company.name }}</h3>
-                  <p class="text-purple-400 text-xs line-clamp-1">{{ company.title }}</p>
+                  <p class="text-gray-500 text-xs line-clamp-1">{{ company.title }}</p>
                 </div>
               </div>
 
-              <div class="flex justify-end items-center gap-4 text-purple-400 col-span-3">
+              <div class="flex justify-end items-center gap-4 text-gray-500 col-span-3">
                 <div class="flex flex-col justify-around text-xs">
                   <p class="hidden sm:block lg:hidden xl:block">{{ company.visits }} visits</p>
                   <p>{{ company.visitors }} visitors</p>
@@ -210,13 +210,13 @@ const people = [
 
           <template #visitors-data="{ row }">
             <p class="text-xs">
-              {{ row.visitors }} <span class="text-purple-400">({{ ((row.visitors / 7724) * 100).toFixed(2) }}%)</span>
+              {{ row.visitors }} <span class="text-gray-500">({{ ((row.visitors / 7724) * 100).toFixed(2) }}%)</span>
             </p>
           </template>
 
           <template #de_anonymized-data="{ row }">
             <p class="text-xs">
-              {{ row.de_anonymized }} <span class="text-purple-400">({{ ((row.de_anonymized / 5455) * 100).toFixed(2) }}%)</span>
+              {{ row.de_anonymized }} <span class="text-gray-500">({{ ((row.de_anonymized / 5455) * 100).toFixed(2) }}%)</span>
             </p>
           </template>
         </UTable>

@@ -60,7 +60,10 @@ const mobileMenu = ref(false);
 
 <template>
   <nav
-    :class="[mobileMenu ? '' : '', 'z-50 sticky top-0 bg-background/75 backdrop-blur rounded-md max-w-screen-2xl mx-2 sm:mx-auto px-1 lg:px-4 3xl:p-0 py-1']"
+    :class="[
+      mobileMenu ? '' : '',
+      'z-50 sticky top-0 lg:bg-background/75 lg:backdrop-blur rounded-md max-w-screen-2xl mx-2 sm:mx-auto px-1 lg:px-4 3xl:p-0 py-1',
+    ]"
   >
     <div class="flex justify-between">
       <a href="/" rel="prefetch" class="flex items-center">
@@ -71,23 +74,23 @@ const mobileMenu = ref(false);
       <div class="hidden md:flex gap-2 lg:gap-4 items-center">
         <div v-for="(link, index) of links" :key="index">
           <NuxtLink :to="link.to" v-if="!link.children">
-            <span :class="[route.path == link.to ? 'text-rose-500' : '', 'flex gap-1 items-center px-2 text-sm xl:text-base hover:text-rose-500']">{{
+            <span :class="[route.path == link.to ? 'text-primary-500' : '', 'flex gap-1 items-center px-2 text-sm xl:text-base hover:text-primary-500']">{{
               link.label
             }}</span>
           </NuxtLink>
 
           <UPopover mode="hover" v-else v-model:open="link.open" class="-mr-2">
             <UButton
-              color="gray"
               variant="ghost"
               :label="link.label"
-              :class="[link.open ? 'text-rose-500' : 'text-purple-50']"
+              size="md"
+              :class="[link.open ? 'text-primary-500' : 'text-gray-900']"
               :ui="{
                 font: '',
                 size: { md: 'text-sm xl:text-base' },
                 color: {
                   gray: {
-                    ghost: 'hover:text-purple-50 hover:bg-purple-900 focus-visible:ring-inset focus-visible:ring-2 focus-visible:ring-primary-500',
+                    ghost: 'hover:text-primary-50 hover:bg-primary-900 focus-visible:ring-inset focus-visible:ring-2 focus-visible:ring-primary-500',
                   },
                 },
               }"
@@ -103,12 +106,12 @@ const mobileMenu = ref(false);
                   v-for="(child, childIndex) of link.children"
                   :key="childIndex"
                   :to="child.to"
-                  :class="[route.path == child.to ? 'bg-purple-900' : '', 'flex gap-2 p-2 rounded-md hover:bg-purple-950']"
+                  :class="[route.path == child.to ? 'bg-gray-100' : '', 'flex gap-2 p-2 rounded-md hover:bg-gray-200']"
                 >
                   <UIcon :name="child.icon" class="w-5 h-5" />
                   <span class="text-sm">
                     <p>{{ child.label }}</p>
-                    <p class="text-purple-400 max-w-96">{{ child.description }}</p>
+                    <p class="text-gray-500 max-w-96">{{ child.description }}</p>
                   </span>
                 </NuxtLink>
               </div>
@@ -126,59 +129,43 @@ const mobileMenu = ref(false);
         <UButton :icon="mobileMenu ? 'i-heroicons-x-mark' : 'i-heroicons-bars-3'" size="sm" square variant="ghost" @click="mobileMenu = !mobileMenu" />
       </div>
     </div>
+  </nav>
 
-    <div :class="[mobileMenu ? '' : 'hidden', 'divide-y divide-purple-300']">
-      <div v-for="(link, index) of links" :key="index" class="py-2">
-        <NuxtLink
-          v-if="!link.children"
-          :to="link.to"
-          :class="[route.path == link.to ? 'text-purple-500' : '', 'flex items-center gap-2']"
-          @click="mobileMenu = false"
-        >
-          <UIcon :name="link.icon" class="h-5 w-5 text-purple-900" />
-          <span>{{ link.label }}</span>
-        </NuxtLink>
+  <!-- Mobile menu, show/hide based on menu open state. -->
+  <div :class="[mobileMenu ? 'lg:hidden' : 'hidden']">
+    <div class="fixed inset-y-0 right-0 z-50 overflow-y-auto bg-gray-100 px-6 py-6 w-full max-w-60">
+      <div class="flex items-center justify-between">
+        <UButton icon="i-heroicons-x-mark" size="sm" color="gray" square variant="ghost" @click="mobileMenu = !mobileMenu" />
+      </div>
+      <div>
+        <div class="divide-y divide-gray-300">
+          <div class="space-y-2 py-6 text-gray-500">
+            <span v-for="(link, index) of links" :key="index">
+              <ULink
+                v-if="!link.children"
+                :to="link.to"
+                :class="[route.path == link.to ? 'text-primary-500' : '', 'flex items-center gap-1 py-2 nav-link hover:text-primary-500']"
+              >
+                <UIcon :name="link.icon" :class="[route.path == link.to ? 'text-primary-500' : '', 'h-5 w-5']" />
+                {{ link.label }}
+              </ULink>
 
-        <div v-else>
-          <UButton
-            color="gray"
-            variant="ghost"
-            :label="link.label"
-            :class="[link.open ? 'text-purple-500' : 'text-purple-900']"
-            :ui="{
-              font: '',
-              size: { md: 'text-base' },
-              color: {
-                gray: {
-                  ghost: 'p-0 hover:text-purple-500 hover:bg-purple-50 focus-visible:ring-inset focus-visible:ring-2 focus-visible:ring-primary-500',
-                },
-              },
-            }"
-          >
-            <template #leading>
-              <UIcon :name="link.icon" class="h-5 w-5 text-purple-900" />
-            </template>
-            <!-- <template #trailing>
-              <UIcon :name="link.open ? `i-heroicons-chevron-up-20-solid` : `i-heroicons-chevron-down-20-solid`" class="w-5 h-5 -ml-1" />
-            </template> -->
-          </UButton>
-
-          <div class="flex flex-col gap-1">
-            <NuxtLink
-              v-for="(child, childIndex) of link.children"
-              :key="childIndex"
-              :to="child.to"
-              :class="[route.path == child.to ? 'bg-purple-100' : '', 'flex gap-2 p-2 rounded-md hover:bg-purple-100']"
-            >
-              <UIcon :name="child.icon" class="w-5 h-5" />
-              <span class="text-sm">
-                <p :class="route.path == child.to ? 'text-purple-500' : ''">{{ child.label }}</p>
-                <p class="text-xs text-purple-800">{{ child.description }}</p>
-              </span>
-            </NuxtLink>
+              <div v-else>
+                <span>{{ link.label }}</span>
+                <ULink
+                  v-for="(item, innerIndex) of link.children"
+                  :key="innerIndex"
+                  :to="item.to"
+                  :class="[route.path == item.to ? 'text-primary-500' : '', 'flex items-center gap-1 px-3 py-2 nav-link hover:text-primary-500']"
+                >
+                  <UIcon :name="item.icon" :class="[route.path == item.to ? 'text-primary-500' : '', 'h-5 w-5']" />
+                  {{ item.label }}
+                </ULink>
+              </div>
+            </span>
           </div>
         </div>
       </div>
     </div>
-  </nav>
+  </div>
 </template>

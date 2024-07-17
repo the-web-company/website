@@ -38,8 +38,6 @@ useHead({
 }
 
 html {
-  @apply h-full;
-  color: #faf5ff;
-  background-color: #3b0764;
+  @apply h-full text-zinc-900 bg-zinc-50;
 }
 </style>

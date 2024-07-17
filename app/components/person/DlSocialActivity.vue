@@ -9,11 +9,11 @@ const data = [
 </script>
 
 <template>
-  <div class="group bg-purple-900 rounded-md p-2">
-    <ul role="list" class="divide-y divide-purple-800 h-full">
+  <div class="group bg-gray-100 rounded-md p-2">
+    <ul role="list" class="divide-y divide-gray-300 h-full">
       <li
         :class="[
-          item.name == data[0].name ? 'group-hover:bg-purple-800 rounded-t-md' : '',
+          item.name == data[0]?.name ? 'group-hover:bg-gray-200 rounded-t-md' : '',
           'transition duration-500 ease-in-out w-full flex items-center gap-2 py-3 px-2',
         ]"
         v-for="(item, index) of data"
@@ -27,7 +27,7 @@ const data = [
               item.name == data[0].name ? `most frequently used` : ""
             }}</span>
           </p>
-          <div class="flex items-center col-span-2"><span class="h-2 bg-purple-500" :style="[`width: ${item.percentage}%`]"></span></div>
+          <div class="flex items-center col-span-2"><span class="h-2 bg-primary-500" :style="[`width: ${item.percentage}%`]"></span></div>
           <p class="text-xs xl:text-sm flex justify-end">{{ item.percentage }}%</p>
         </div>
       </li>

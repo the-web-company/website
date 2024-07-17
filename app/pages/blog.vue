@@ -48,8 +48,8 @@ watch(selectedCategory, async () => {
 <template>
   <div class="max-w-screen-2xl mx-auto px-4 3xl:px-0 py-14">
     <div>
-      <h2 class="text-3xl sm:text-4xl xl:text-5xl">{{ data.title }}</h2>
-      <p class="mt-2 text-lg text-purple-400">{{ data.subtitle }}</p>
+      <h2 class="text-3xl sm:text-4xl xl:text-5xl">{{ data?.title }}</h2>
+      <p class="mt-2 text-lg text-gray-500">{{ data?.subtitle }}</p>
     </div>
 
     <div class="mt-4" v-if="posts.length">
@@ -57,8 +57,8 @@ watch(selectedCategory, async () => {
         <div v-for="(category, index) of ['all', ...allCategories]" :key="index">
           <button
             :class="[
-              selectedCategory == category ? 'bg-purple-700' : '',
-              'capitalize rounded-md text-nowrap text-xs bg-purple-900 px-2 py-1.5 text-purple-100 hover:bg-purple-700',
+              selectedCategory == category ? 'bg-gray-100' : '',
+              'capitalize rounded-md text-nowrap text-xs bg-gray-100 px-2 py-1.5 text-gray-500 hover:bg-gray-200',
             ]"
             @click="selectedCategory = category"
           >
@@ -67,7 +67,7 @@ watch(selectedCategory, async () => {
         </div>
       </div>
 
-      <div class="my-10 bg-purple-800 rounded-md p-2">
+      <div class="my-10 bg-gray-100 rounded-md p-2">
         <DlHighlight :post="posts[0]" />
       </div>
 
@@ -82,21 +82,21 @@ watch(selectedCategory, async () => {
               <div class="flex justify-between items-center gap-x-4 text-sm">
                 <button
                   @click="selectedCategory = post.category"
-                  class="capitalize rounded-md text-nowrap text-xs bg-purple-900 px-2 py-1.5 text-purple-100 hover:bg-purple-900"
+                  class="capitalize rounded-md text-nowrap text-xs bg-gray-100 px-2 py-1.5 text-gray-500 hover:bg-gray-200"
                 >
                   {{ post.category }}
                 </button>
-                <time :datetime="post.pubDate" class="text-purple-400 text-nowrap">{{ new Date(post.pubDate).toDateString() }}</time>
+                <time :datetime="post.pubDate" class="text-gray-500 text-nowrap">{{ new Date(post.pubDate).toDateString() }}</time>
               </div>
               <a :href="post._path">
                 <h3 class="mt-4 text-lg font-semibold">
                   {{ post.title }}
                 </h3>
               </a>
-              <p class="mt-2 text-sm text-purple-400 line-clamp-5">{{ post.description }}</p>
+              <p class="mt-2 text-sm text-gray-500 line-clamp-5">{{ post.description }}</p>
             </div>
 
-            <div class="flex border-t border-purple-700 pt-5">
+            <div class="flex border-t border-gray-300 pt-5">
               <DlAuthor :post="post" />
             </div>
           </div>

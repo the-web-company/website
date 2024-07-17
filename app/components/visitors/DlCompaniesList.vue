@@ -56,17 +56,17 @@ const companies = [
         </div>
       </div>
 
-      <div class="mt-2 divide-y divide-purple-700 flex flex-col">
-        <div v-for="(company, index) of companies" :key="index" class="flex justify-between p-2 hover:bg-purple-950 cursor-pointer">
+      <div class="mt-2 divide-y divide-gray-300 flex flex-col">
+        <div v-for="(company, index) of companies" :key="index" class="flex justify-between p-2 hover:bg-gray-50 cursor-pointer">
           <div class="flex items-center gap-4">
             <UAvatar :src="company.logo" :alt="company.name" />
             <div class="flex flex-col justify-around">
               <h3>{{ company.name }}</h3>
-              <p class="text-purple-400 text-sm">{{ company.subtitle.length > 80 ? `${company.subtitle.slice(0, 80)}...` : company.subtitle }}</p>
+              <p class="text-gray-500 text-sm">{{ company.subtitle.length > 80 ? `${company.subtitle.slice(0, 80)}...` : company.subtitle }}</p>
             </div>
           </div>
 
-          <div class="flex items-center gap-4 text-purple-400">
+          <div class="flex items-center gap-4 text-gray-500">
             <div class="flex flex-col justify-around text-sm">
               <p>{{ company.visits }} visits</p>
               <p>{{ company.visitors }} visitors</p>

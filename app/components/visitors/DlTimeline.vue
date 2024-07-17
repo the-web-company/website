@@ -14,7 +14,7 @@ const data = ref<DataRecord[]>([
 ]);
 const items = [
   { name: "Total unique visitors", color: "red" },
-  { name: "Familiar visitors", color: "yellow" },
+  { name: "Familiar visitors", color: "blue" },
 ];
 
 const x = (d: DataRecord) => d.x;
@@ -31,10 +31,10 @@ const triggers = {
     <h2 class="font-medium text-lg">Timeline</h2>
 
     <VisXYContainer :data="data">
-      <VisLine :x="x" :y="y" :color="['yellow', 'red']" />
+      <VisLine :x="x" :y="y" :color="['blue', 'red']" />
       <VisAxis type="x" />
       <VisAxis type="y" />
-      <VisScatter :x="x" :y="y" :color="['yellow', 'red']" />
+      <VisScatter :x="x" :y="y" :color="['blue', 'red']" />
       <VisTooltip :triggers="triggers" />
     </VisXYContainer>
 

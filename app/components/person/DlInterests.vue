@@ -31,15 +31,15 @@ const stopVideo = () => {
 </script>
 
 <template>
-  <div class="bg-purple-900 rounded-md p-2 grid grid-rows-4 gap-2 h-full" @mouseover="startVideo" @mouseleave="stopVideo">
-    <div class="w-full h-full bg-purple-700 rounded-md"></div>
-    <div class="w-full h-full bg-purple-800 rounded-md justify-between p-2 row-span-2 flex gap-2">
+  <div class="bg-gray-100 rounded-md p-2 grid grid-rows-4 gap-2 h-full" @mouseover="startVideo" @mouseleave="stopVideo">
+    <div class="w-full h-full bg-gray-300 rounded-md"></div>
+    <div class="w-full h-full bg-gray-200 rounded-md justify-between p-2 row-span-2 flex gap-2">
       <p class="text-sm xl:text-base">Have a active Formula 1 subscription</p>
       <video v-if="showVideo" ref="videoRef" muted class="rounded-md object-cover w-7/12">
         <source src="/components/formula_1.mp4" />
       </video>
       <img v-else src="/components/formula_1.webp" class="rounded-md object-cover w-1/2 2xl:w-fit" />
     </div>
-    <div class="w-full h-full bg-purple-700 rounded-md"></div>
+    <div class="w-full h-full bg-gray-300 rounded-md"></div>
   </div>
 </template>

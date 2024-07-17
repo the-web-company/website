@@ -206,7 +206,7 @@ const data = [
   { id: "ZW", value: Math.round(Math.random() * 1000) },
 ];
 
-const palette = ["#ffe4e6", "#4c0519"];
+const palette = ["#dbeafe", "#172554"];
 const colorScale = Scale.scaleSequential(palette).domain([0, 1000]);
 const areaColor = () => (d: Record<string, any>) => colorScale(d.value);
 const tooltipTriggers = { [TopoJSONMap.selectors.feature]: (d: Record<string, any>) => `${d.properties.name}: ${d.data ? d.data.value : "no data"}` };

@@ -62,7 +62,7 @@ onMounted(() => {
     <div class="flex flex-col sm:flex-row justify-between items-center my-10 gap-4">
       <DlAuthor :post="currentPost" />
 
-      <div class="flex flex-col sm:flex-row gap-2 items-center text-sm text-purple-400">
+      <div class="flex flex-col sm:flex-row gap-2 items-center text-sm text-gray-500">
         <span class="flex gap-1 items-center">
           <UIcon name="i-heroicons-calendar-days" />
           <time :datetime="currentPost.pubDate">{{ new Date(currentPost.pubDate).toDateString() }}</time>
@@ -81,28 +81,28 @@ onMounted(() => {
         </ContentDoc>
       </div>
 
-      <div class="lg:px-0 lg:col-span-2 text-purple-400 text-sm h-fit lg:sticky lg:top-20 flex flex-col-reverse lg:flex-col">
+      <div class="lg:px-0 lg:col-span-2 text-gray-500 text-sm h-fit lg:sticky lg:top-20 flex flex-col-reverse lg:flex-col">
         <nav>
           <p class="font-semibold">ON THIS PAGE</p>
           <ul>
             <div v-for="link of currentPost.body?.toc?.links" :key="link.id">
               <li class="py-1">
-                <a :href="`#${link.id}`" class="hover:text-purple-200">{{ link.text }}</a>
+                <a :href="`#${link.id}`" class="hover:text-gray-900">{{ link.text }}</a>
               </li>
-              <li v-for="sublink of link.children || []" :key="sublink.id" class="ml-2 pl-2 border-l border-purple-200 py-1">
-                <a :href="`#${sublink.id}`" class="hover:text-purple-200">{{ sublink.text }}</a>
+              <li v-for="sublink of link.children || []" :key="sublink.id" class="ml-2 pl-2 border-l border-gray-300 py-1">
+                <a :href="`#${sublink.id}`" class="hover:text-gray-900">{{ sublink.text }}</a>
               </li>
             </div>
           </ul>
         </nav>
 
-        <div class="mb-6 lg:m-0 pb-6 lg:p-0 border-b lg:border-0 border-neutral-300">
+        <div class="mb-6 lg:m-0 pb-6 lg:p-0 border-b lg:border-0 border-gray-300">
           <p class="font-semibold mt-5 text-xs">Share this article:</p>
           <div class="mt-2 flex items-center gap-4">
             <NuxtLink
               :href="`https://twitter.com/intent/tweet?text=https://thewebco.ai${currentPost._path}`"
               target="_blank"
-              class="text-purple-800 hover:text-purple-700"
+              class="text-gray-400 hover:text-gray-700"
             >
               <span class="sr-only">Twitter / X</span>
               <svg class="h-4 w-4" fill="currentColor" viewBox="0 0 487.43 456.19">
@@ -117,7 +117,7 @@ onMounted(() => {
             <NuxtLink
               :href="`https://www.linkedin.com/shareArticle?mini=true&url=https://thewebco.ai${currentPost._path}`"
               target="_blank"
-              class="text-purple-800 hover:text-purple-700"
+              class="text-gray-400 hover:text-gray-700"
             >
               <span class="sr-only">LinkedIn</span>
               <svg class="h-5 w-5" fill="currentColor" height="1em" viewBox="0 0 448 512" aria-hidden="true">
@@ -129,7 +129,7 @@ onMounted(() => {
             <NuxtLink
               :href="`https://www.facebook.com/sharer/sharer.php?u=https://thewebco.ai${currentPost._path}`"
               target="_blank"
-              class="text-purple-800 hover:text-purple-700"
+              class="text-gray-400 hover:text-gray-700"
             >
               <span class="sr-only">Facebook</span>
               <svg
@@ -165,7 +165,7 @@ onMounted(() => {
 
 <style scoped>
 nav .active {
-  @apply text-purple-200;
+  @apply text-gray-900;
 }
 
 .blog-content :deep(h1) {

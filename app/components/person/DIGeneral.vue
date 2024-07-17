@@ -35,10 +35,10 @@ const person = {
 </script>
 
 <template>
-  <div class="group bg-purple-900 rounded-md h-full">
+  <div class="group bg-gray-100 rounded-md h-full">
     <div class="relative">
       <img :src="person.cover_picture" class="rounded-tl-md rounded-tr-md w-full h-14 object-cover" />
-      <img :src="person.profile_picture" class="rounded-full w-20 h-20 absolute top-6 left-10 ring-2 ring-purple-900" />
+      <img :src="person.profile_picture" class="rounded-full w-20 h-20 absolute top-6 left-10 ring-2 ring-gray-100" />
       <h2 class="text-xl font-medium capitalize mt-2 mb-4 ml-36">{{ person.first_name }} {{ person.last_name }}</h2>
     </div>
 
@@ -56,16 +56,14 @@ const person = {
         <section>
           <p class="font-medium text-sm">Phone</p>
           <UTooltip :text="item.type" v-for="(item, index) of person.phones" :key="index" class="block">
-            <div class="h-3 w-2/5 bg-purple-700 rounded-md group-hover:opacity-0 transition duration-500 ease-in-out"></div>
-            <span class="absolute text-purple-400 text-xs transition duration-500 ease-in-out opacity-0 group-hover:opacity-100 -top-0.5">{{
-              item.number
-            }}</span>
+            <div class="h-3 w-2/5 bg-gray-300 rounded-md group-hover:opacity-0 transition duration-500 ease-in-out"></div>
+            <span class="absolute text-gray-500 text-xs transition duration-500 ease-in-out opacity-0 group-hover:opacity-100 -top-0.5">{{ item.number }}</span>
           </UTooltip>
         </section>
 
         <section>
           <p class="font-medium text-sm">Birthday</p>
-          <p class="text-purple-400 text-xs break-words">
+          <p class="text-gray-500 text-xs break-words">
             {{ person.birth_date }}
           </p>
         </section>
@@ -74,14 +72,14 @@ const person = {
           <p class="font-medium text-sm">Email</p>
           <UTooltip :text="item.type" v-for="(item, index) of person.emails" :key="index" class="block relative">
             <div v-if="index == 0">
-              <div class="h-3 w-1/3 bg-purple-700 rounded-md mb-1 group-hover:opacity-0 transition duration-500 ease-in-out"></div>
-              <span class="absolute text-purple-400 text-xs transition duration-500 ease-in-out opacity-0 group-hover:opacity-100 -top-0.5">{{
+              <div class="h-3 w-1/3 bg-gray-300 rounded-md mb-1 group-hover:opacity-0 transition duration-500 ease-in-out"></div>
+              <span class="absolute text-gray-500 text-xs transition duration-500 ease-in-out opacity-0 group-hover:opacity-100 -top-0.5">{{
                 item.address
               }}</span>
             </div>
             <div v-if="index == 1">
-              <div class="h-3 w-2/3 bg-purple-700 rounded-md group-hover:opacity-0 transition duration-500 ease-in-out"></div>
-              <span class="absolute text-purple-400 text-xs transition duration-500 ease-in-out opacity-0 group-hover:opacity-100 -top-0.5">{{
+              <div class="h-3 w-2/3 bg-gray-300 rounded-md group-hover:opacity-0 transition duration-500 ease-in-out"></div>
+              <span class="absolute text-gray-500 text-xs transition duration-500 ease-in-out opacity-0 group-hover:opacity-100 -top-0.5">{{
                 item.address
               }}</span>
             </div>
@@ -90,19 +88,19 @@ const person = {
 
         <section>
           <p class="font-medium text-sm">Gender</p>
-          <p class="text-purple-400 text-xs">{{ person.gender }}</p>
+          <p class="text-gray-500 text-xs">{{ person.gender }}</p>
         </section>
 
         <section>
           <p class="font-medium text-sm">Locations</p>
-          <div class="h-3 w-2/3 bg-purple-700 rounded-md"></div>
+          <div class="h-3 w-2/3 bg-gray-300 rounded-md"></div>
         </section>
 
         <section>
           <p class="font-medium text-sm">Languages</p>
-          <div class="h-3 w-1/3 bg-purple-700 rounded-md mb-1"></div>
-          <div class="h-3 w-2/5 bg-purple-700 rounded-md mb-1"></div>
-          <div class="h-3 w-1/5 bg-purple-700 rounded-md"></div>
+          <div class="h-3 w-1/3 bg-gray-300 rounded-md mb-1"></div>
+          <div class="h-3 w-2/5 bg-gray-300 rounded-md mb-1"></div>
+          <div class="h-3 w-1/5 bg-gray-300 rounded-md"></div>
         </section>
       </div>
     </div>
@@ -110,8 +108,8 @@ const person = {
     <section class="px-4">
       <p class="font-medium text-sm">About</p>
       <div class="flex flex-col gap-2">
-        <div class="h-3 w-full bg-purple-700 rounded-md"></div>
-        <div class="h-3 w-1/4 bg-purple-700 rounded-md"></div>
+        <div class="h-3 w-full bg-gray-300 rounded-md"></div>
+        <div class="h-3 w-1/4 bg-gray-300 rounded-md"></div>
       </div>
     </section>
   </div>
