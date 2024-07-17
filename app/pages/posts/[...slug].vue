@@ -180,19 +180,29 @@ nav .active {
 }
 
 .blog-content :deep(p) {
-  @apply my-2 leading-loose text-lg;
+  @apply my-2 leading-loose;
 }
 
 .blog-content :deep(img) {
   @apply rounded-md h-full md:w-3/4 object-cover my-4 mx-auto;
 }
 
-.blog-content :deep(ol) {
-  @apply list-decimal ml-4;
+.blog-content :deep(ol),
+.blog-content :deep(ul) {
+  @apply pl-8;
 }
 
-.blog-content :deep(ol li) {
-  @apply my-4 leading-loose text-lg;
+.blog-content :deep(ol) {
+  @apply list-decimal;
+}
+
+.blog-content :deep(ul) {
+  @apply list-disc;
+}
+
+.blog-content :deep(ol li),
+.blog-content :deep(ul li) {
+  @apply my-4 leading-loose;
 }
 
 .blog-content :deep(ol li br) {

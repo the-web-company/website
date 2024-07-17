@@ -57,7 +57,7 @@ watch(selectedCategory, async () => {
         <div v-for="(category, index) of ['all', ...allCategories]" :key="index">
           <button
             :class="[
-              selectedCategory == category ? 'bg-gray-100' : '',
+              selectedCategory == category ? 'bg-gray-200' : '',
               'capitalize rounded-md text-nowrap text-xs bg-gray-100 px-2 py-1.5 text-gray-500 hover:bg-gray-200',
             ]"
             @click="selectedCategory = category"
