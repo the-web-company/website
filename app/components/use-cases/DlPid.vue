@@ -32,7 +32,7 @@ const browserAttributes = [
     </div>
 
     <div
-      class="bg-primary-200 ring-1 ring-primary-300 rounded-md w-fit p-4 flex justify-center items-center h-fit relative before:content-[''] before:w-20 before:border-b rotate-90 lg:rotate-0 before:absolute before:bottom-1/2 before:border-violet-200 before:right-full after:content-[''] after:w-20 after:border-b after:absolute after:bottom-1/2 after:border-violet-200 after:left-full"
+      class="bg-primary-200 ring-1 ring-primary-300 rounded-md w-fit p-4 flex justify-center items-center h-fit relative before:content-[''] before:w-20 before:border-b rotate-90 lg:rotate-0 before:absolute before:bottom-1/2 before:border-primary-300 before:right-full after:content-[''] after:w-20 after:border-b after:absolute after:bottom-1/2 after:border-primary-300 after:left-full"
     >
       <svg class="h-10 w-10 md:h-14 md:w-14 fill-primary-500 -rotate-90 lg:rotate-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
         <path

@@ -1,5 +1,5 @@
 ---
-title: "Understanding User Attribution in a Post-Third-Party Cookie World"
+title: "Understanding user attribution in a post 3rd-party cookie world"
 pubDate: 2024-7-17T12:00:00+03:00
 published: true
 author: "Nir Galon"

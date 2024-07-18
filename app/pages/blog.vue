@@ -10,7 +10,10 @@ const page = ref(1);
 const loading = ref(false);
 const selectedCategory = ref("all");
 const total = await queryContent("/posts").count();
-const allCategories = new Set((await queryContent("/posts").where({ published: true }).find()).map((post: Record<string, any>) => post.category));
+const allCategories = [...new Set((await queryContent("/posts").where({ published: true }).find()).map((post: Record<string, any>) => post.category))].sort(
+  (a, b) => a.localeCompare(b)
+);
+allCategories.unshift("all");
 let posts = ref([] as Array<any>);
 getPosts();
 
@@ -54,7 +57,7 @@ watch(selectedCategory, async () => {
 
     <div class="mt-4" v-if="posts.length">
       <div class="flex gap-4">
-        <div v-for="(category, index) of ['all', ...allCategories]" :key="index">
+        <div v-for="(category, index) of allCategories" :key="index">
           <button
             :class="[
               selectedCategory == category ? 'bg-gray-200' : '',
