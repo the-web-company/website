@@ -2,20 +2,47 @@
 import DlCta from "@/components/DlCta.vue";
 
 definePageMeta({ title: "Pricing" });
-const yearlyCost = ref(true);
-const credits = ref(50);
-const seats = ref(1);
+const localState = reactive({
+  requests: 0,
+  identity: false,
+  showPricingTable: false,
+});
+
+const pricingTable = [
+  { label: "0-1K", eventPrice: "Free - every month!" },
+  { label: "1K-500K", eventPrice: 0.0015 },
+  { label: "500K-2M", eventPrice: 0.001 },
+  { label: "2M-10M", eventPrice: 0.0005 },
+  { label: "10M-50M", eventPrice: 0.00025 },
+  { label: "50M-100M", eventPrice: 0.00018 },
+  { label: "100M+", eventPrice: "Contact us" },
+];
+
+const formatter = new Intl.NumberFormat("en-US", { style: "currency", currency: "USD", minimumFractionDigits: 0, maximumFractionDigits: 0 });
 
 const currentPrices = computed(() => {
-  const creditPackagePrice = 25;
-  const totalCredits = (credits.value / 50 + 1) * creditPackagePrice;
-  const totalSeats = (seats.value - 1) * 50;
-
-  if (credits.value >= 500 || seats.value > 10) {
-    return "Talk to us";
+  let totalPrice = 0;
+  if (localState.requests < 1000) {
+    totalPrice = localState.requests * 0;
+  } else if (localState.requests < 500000) {
+    totalPrice = localState.requests * Number(pricingTable[1]?.eventPrice);
+  } else if (localState.requests < 2000000) {
+    totalPrice = localState.requests * Number(pricingTable[2]?.eventPrice);
+  } else if (localState.requests < 10000000) {
+    totalPrice = localState.requests * Number(pricingTable[3]?.eventPrice);
+  } else if (localState.requests < 50000000) {
+    totalPrice = localState.requests * Number(pricingTable[4]?.eventPrice);
+  } else if (localState.requests < 100000000) {
+    totalPrice = localState.requests * Number(pricingTable[5]?.eventPrice);
+  } else {
+    return pricingTable[6]?.eventPrice;
   }
 
-  return yearlyCost.value ? (totalCredits + totalSeats) * 0.8 : totalCredits + totalSeats;
+  if (localState.identity) {
+    return totalPrice * 1.25;
+  }
+
+  return totalPrice;
 });
 </script>
 
@@ -25,55 +52,41 @@ const currentPrices = computed(() => {
 
     <div class="grid lg:grid-cols-12 max-w-screen-2xl rounded-md ring-1 ring-gray-300 mx-auto">
       <div class="p-8 lg:col-span-9">
-        <div class="flex justify-between items-center">
-          <h3 class="text-2xl">Platform</h3>
-          <span class="flex gap-2 text-sm sm:text-base">
-            <UToggle color="primary" v-model="yearlyCost" />
-            <p>Yearly</p>
-          </span>
-        </div>
-
-        <div class="hidden sm:flex items-center gap-4 mt-6">
-          <p class="text-gray-500 -mt-6">Credits</p>
-          <div class="w-full">
-            <URange size="sm" :min="0" :max="500" :step="50" v-model="credits" />
-            <div class="flex justify-between -translate-x-1">
-              <span>50</span>
-              <span class="translate-x-2">100</span>
-              <span class="translate-x-3">150</span>
-              <span class="translate-x-4">200</span>
-              <span class="translate-x-5">250</span>
-              <span class="translate-x-5">300</span>
-              <span class="translate-x-5">350</span>
-              <span class="translate-x-5">400</span>
-              <span class="translate-x-5">450</span>
-              <span class="translate-x-6">500</span>
-              <span class="translate-x-5">500+</span>
+        <div class="hidden sm:flex flex-col gap-4">
+          <div>
+            <div class="flex items-center gap-4">
+              <p class="text-gray-500">Requests</p>
+              <URange size="sm" :min="0" :step="1000" :max="100000000" v-model="localState.requests" />
+              <UInput v-model="localState.requests" placeholder="Number of monthly req" type="number"> </UInput>
             </div>
+            <UButton
+              :label="localState.showPricingTable ? 'Hide pricing table' : 'Show pricing table'"
+              variant="link"
+              :padded="false"
+              size="xs"
+              @click="localState.showPricingTable = !localState.showPricingTable"
+            />
+
+            <div v-if="localState.showPricingTable" class="grid grid-cols-2 pl-4">
+              <div>
+                <div v-for="(item, index) of pricingTable" :key="index" class="flex justify-between border-b border-gray-300 py-2 text-sm">
+                  <span>{{ item.label }}</span>
+                  <span class="text-gray-500"
+                    ><span v-if="index != 0 && index != pricingTable.length - 1">$</span><strong>{{ item.eventPrice }}</strong
+                    ><span v-if="index != 0 && index != pricingTable.length - 1">/req</span></span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="flex justify-between items-center">
+            <p class="text-gray-500">Identity add on</p>
+            <UToggle v-model="localState.identity" />
           </div>
         </div>
 
-        <div class="hidden sm:flex items-center gap-8 mt-6">
-          <p class="text-gray-500 -mt-6">Seats</p>
-          <div class="w-full">
-            <URange size="sm" :min="1" :max="11" :step="1" v-model="seats" />
-            <div class="flex justify-between -translate-x-1">
-              <span class="translate-x-2">1</span>
-              <span class="translate-x-3">2</span>
-              <span class="translate-x-3">3</span>
-              <span class="translate-x-3">4</span>
-              <span class="translate-x-4">5</span>
-              <span class="translate-x-4">6</span>
-              <span class="translate-x-5">7</span>
-              <span class="translate-x-5">8</span>
-              <span class="translate-x-5">9</span>
-              <span class="translate-x-5">10</span>
-              <span class="translate-x-5">10+</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="sm:hidden flex items-center gap-4 mt-6">
+        <!-- <div class="sm:hidden flex items-center gap-4 mt-6">
           <span class="flex rounded-md ring-1 ring-gray-300 items-center text-xl">
             <UButton class="flex items-center px-2 py-3 sm:px-3 sm:py-4" color="gray" variant="ghost" @click="credits > 50 ? (credits -= 50) : credits"
               ><UIcon name="i-heroicons-minus"
@@ -87,21 +100,7 @@ const currentPrices = computed(() => {
           <p class="text-sm sm:text-base font-medium">
             Credits package<span class="hidden sm:block text-gray-500 text-xs font-normal"> (50 credits in a package, unlimited searchs)</span>
           </p>
-        </div>
-
-        <div class="sm:hidden flex items-center gap-4 mt-6">
-          <span class="flex rounded-md ring-1 ring-gray-300 items-center text-xl">
-            <UButton class="flex items-center px-2 py-3 sm:px-3 sm:py-4" color="gray" variant="ghost" @click="seats > 1 ? (seats -= 1) : seats"
-              ><UIcon name="i-heroicons-minus"
-            /></UButton>
-            <p class="p-1 sm:p-2 w-10 flex justify-center text-sm md:text-base">{{ seats < 11 ? seats : "10+" }}</p>
-            <UButton class="flex items-center px-2 py-3 sm:px-3 sm:py-4" color="gray" variant="ghost" @click="seats < 11 ? (seats += 1) : seats"
-              ><UIcon name="i-heroicons-plus"
-            /></UButton>
-          </span>
-
-          <p class="text-sm sm:text-base font-medium">Seats</p>
-        </div>
+        </div> -->
 
         <div class="mt-10 flex items-center gap-x-4">
           <h4 class="text-sm font-semibold text-primary-500">What’s included</h4>
@@ -122,15 +121,12 @@ const currentPrices = computed(() => {
       </div>
 
       <div class="lg:col-span-3 rounded-r-md bg-gray-100 flex flex-col justify-around items-center gap-4 px-8 space-y-4 lg:space-y-0 py-8 lg:py-0">
-        <p class="text-gray-500">Builld {{ yearlyCost ? "Yearly" : "Monthly" }}</p>
         <div>
           <p class="flex items-end justify-center gap-x-2">
-            <span class="text-4xl font-bold tracking-tight">{{ currentPrices == "Talk to us" ? currentPrices : `$${currentPrices}` }}</span>
-            <span class="text-sm font-semibold leading-6 tracking-wide text-gray-500" v-if="currentPrices != 'Talk to us'"
-              >USD {{ yearlyCost ? "(20% off)" : "" }}</span
-            >
+            <span class="text-4xl font-bold tracking-tight">{{
+              currentPrices == "Contact us" ? currentPrices : `${formatter.format(Number(currentPrices))}`
+            }}</span>
           </p>
-          <UButton variant="link" @click="() => (yearlyCost = true)" v-if="!yearlyCost" label="Switch to yearly billing and save 20%" />
         </div>
         <UButton label="Get access" to="https://app.thewebco.ai/auth/register" target="_blank" block />
       </div>

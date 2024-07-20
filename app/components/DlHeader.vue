@@ -60,10 +60,7 @@ const mobileMenu = ref(false);
 
 <template>
   <nav
-    :class="[
-      mobileMenu ? '' : '',
-      'z-50 sticky top-0 lg:bg-background/75 lg:backdrop-blur rounded-md max-w-screen-2xl mx-2 sm:mx-auto px-1 lg:px-4 3xl:p-0 py-1',
-    ]"
+    :class="[mobileMenu ? '' : '', 'z-50 sticky top-0 bg-background/75 backdrop-blur rounded-md max-w-screen-2xl mx-2 sm:mx-auto px-1 lg:px-4 3xl:p-0 py-1']"
   >
     <div class="flex justify-between">
       <a href="/" rel="prefetch" class="flex items-center">
