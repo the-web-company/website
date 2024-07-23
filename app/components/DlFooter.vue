@@ -58,7 +58,7 @@ const menu = [
                 />
               </svg>
             </NuxtLink>
-            <NuxtLink href="https://www.linkedin.com/company/the-web-company" target="_blank" class="text-gray-400 hover:text-gray-600">
+            <NuxtLink href="https://www.linkedin.com/company/thewebco" target="_blank" class="text-gray-400 hover:text-gray-600">
               <span class="sr-only">LinkedIn</span>
               <svg class="h-6 w-6" fill="currentColor" height="1em" viewBox="0 0 448 512" aria-hidden="true">
                 <path
