@@ -1,7 +1,7 @@
 ---
 title: "Revolutionizing online security"
-pubDate: 2024-8-01T09:00:00+03:00
-published: false
+pubDate: 2024-8-08T09:00:00+03:00
+published: true
 author: "Nir Galon"
 authorTitle: "Co-Founder / CTO"
 authorPicture: "/authors/nir-galon.webp"

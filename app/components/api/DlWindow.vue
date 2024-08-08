@@ -70,7 +70,7 @@ const menuMobile = ref(false);
         <UIcon name="i-heroicons-arrow-path" class="w-4 h-4 md:w-5 md:h-5 lg:w-6 lg:h-6" />
       </div>
       <div class="px-2 md:px-4 py-1 md:py-2 my-auto flex-1 border border-gray-300 bg-white rounded-md text-xs md:text-sm">
-        /Users/datalead-ai/examples/{{ chosenFile }}
+        /Users/thewebco/examples/{{ chosenFile }}
       </div>
       <div class="p-2 flex gap-2 text-gray-400">
         <UIcon name="i-heroicons-arrow-down-tray" class="w-4 h-4 md:w-5 md:h-5 lg:w-6 lg:h-6" />
