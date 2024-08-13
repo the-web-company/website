@@ -25,7 +25,7 @@ async function submit() {
       <h2 class="text-3xl lg:text-4xl">Subscribe to our newsletter</h2>
       <p class="mt-2 leading-8 text-gray-500">Get our latest news, announcements and updates delivered directly to your inbox.</p>
       <div class="mt-2 flex gap-x-4" v-if="!localState.submitted">
-        <UInput placeholder="Enter your email" class="w-full" v-model="localState.email" />
+        <UInput placeholder="Enter your email" type="email" class="w-full" v-model="localState.email" />
         <UButton label="Subscribe" @click="submit" :disabled="!localState.email" :loading="localState.loading" />
       </div>
       <div v-else>
