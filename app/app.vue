@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import { TheWebCo } from "@thewebco/pid";
-new TheWebCo("14ada8cb-136b-442d-91ce-7330c6d5ebbd");
 const route = useRoute();
 
 useSeoMeta({
