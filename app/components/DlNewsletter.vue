@@ -7,7 +7,7 @@ const localState = reactive({
 
 async function submit() {
   localState.loading = true;
-  await $fetch<Record<string, any>>("https://auth.thewebco.ai/functions/v1/newsletter", {
+  await $fetch<Record<string, any>>("https://pesfnixujmfnvctemopa.supabase.co/functions/v1/newsletter", {
     method: "POST",
     body: JSON.stringify({ email: localState.email }),
   })
