@@ -1,1 +1,0 @@
-import{e,c as s,f as t}from"./i-glYdYA.js";const c={class:"max-w-screen-2xl mx-auto px-4 3xl:px-0 py-10 xl:py-14"},a=t("p",null,"claim",-1),o=[a],r={__name:"claim",setup(_){return(l,n)=>(s(),e("div",c,o))}};export{r as default};
