@@ -18,6 +18,7 @@ useSeoMeta({
   ogImage: "https://thewebco.ai/social-banner.webp",
   ogImageAlt: "TheWebCo logo",
   ogUrl: "https://thewebco.ai",
+  ogType: "website",
 
   twitterCard: "summary_large_image",
   twitterImage: "https://thewebco.ai/social-banner.webp",

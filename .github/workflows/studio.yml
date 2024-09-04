@@ -68,7 +68,8 @@ jobs:
 
       - name: Generate
         # run: npx nuxi build --preset github_pages
-        run: npx nuxt generate
+        run: npm run build
+        # run: npx nuxt generate
         env:
           NUXT_PUBLIC_STUDIO_API_URL: https://api.nuxt.studio
 
