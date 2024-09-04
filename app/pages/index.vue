@@ -11,12 +11,11 @@ import DiVisitors from "@/components/platform/DiVisitors.vue";
 <template>
   <div class="max-w-screen-2xl mx-auto px-4 3xl:px-0 flex flex-col justify-center items-center py-10 xl:py-14">
     <h1 class="text-3xl sm:text-4xl xl:text-5xl font-semibold leading-tight text-center">
-      Next-Gen AI platform to <br class="hidden lg:block" /><span class="bg-clip-text text-transparent bg-gradient-to-r from-primary-800 to-primary-200"
-        >uniquely know</span
-      >
-      your data
+      For <span class="bg-clip-text text-transparent bg-gradient-to-r from-primary-800 to-primary-200">the first time ever</span> you can actually
+      <br class="hidden lg:block" />
+      know your visitors & users
     </h1>
-    <h2 class="text-center text-gray-500 text-lg md:text-xl mt-4">Reveal your data and get actionable insights to supercharge your teams</h2>
+    <h2 class="text-center text-gray-500 text-lg md:text-xl mt-4">Take actions based on their journey, what's important to them, and who they are</h2>
 
     <div class="flex items-center gap-4 mt-6">
       <UButton label="Request demo" to="https://calendar.app.google/i7EhNVG7Yt4KUnGP9" target="_blank" />

@@ -1,7 +1,7 @@
 ---
 title: "Discover your audience: How we revolutionizes visitor tracking"
-pubDate: 2024-9-01T09:00:00+03:00
-published: false
+pubDate: 2024-9-04T09:00:00+03:00
+published: true
 author: "Nir Galon"
 authorTitle: "Co-Founder / CTO"
 authorPicture: "/authors/nir-galon.webp"
