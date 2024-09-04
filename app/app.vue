@@ -3,7 +3,10 @@ const route = useRoute();
 
 useHead({
   meta: [{ name: "viewport", content: "width=device-width, initial-scale=1" }],
-  link: [{ rel: "icon", href: "/favicon.svg" }],
+  link: [
+    { rel: "icon", type: "image/svg+xml", href: "/favicon.svg" },
+    { rel: "icon", type: "image/png", href: "/favicon.png" },
+  ],
   htmlAttrs: {
     lang: "en",
   },
@@ -13,8 +16,8 @@ useSeoMeta({
   ogSiteName: `TheWebCo AI${route.meta.title ? ` | ${route.meta.title}` : ""}`,
   title: `TheWebCo AI${route.meta.title ? ` | ${route.meta.title}` : ""}`,
   ogTitle: `TheWebCo AI${route.meta.title ? ` | ${route.meta.title}` : ""}`,
-  description: "Next-Gen AI platform to uniquely know your data.",
-  ogDescription: "Next-Gen AI platform to uniquely know your data.",
+  description: "Really know your visitors & users!",
+  ogDescription: "Really know your visitors & users!",
   ogImage: "https://thewebco.ai/social-banner.webp",
   ogImageAlt: "TheWebCo logo",
   ogUrl: "https://thewebco.ai",

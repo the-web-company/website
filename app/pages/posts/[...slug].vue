@@ -25,7 +25,7 @@ useSeoMeta({
 });
 
 onMounted(() => {
-  const anchors: Array<any> = document.querySelectorAll(".blog-content h2, h3");
+  const anchors: NodeListOf<any> = document.querySelectorAll(".blog-content h2, h3");
   const links = document.querySelectorAll("nav > ul > div > li > a");
 
   window.addEventListener("scroll", () => {
@@ -40,7 +40,7 @@ onMounted(() => {
       // then iterate backwards, on the first match highlight it and break
       for (var i = anchors.length - 1; i >= 0; i--) {
         if (scrollTop > anchors[i].offsetTop - 80) {
-          links[i].classList.add("active");
+          links[i]?.classList.add("active");
           break;
         }
       }

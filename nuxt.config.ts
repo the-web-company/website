@@ -1,8 +1,8 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  ssr: false,
+  ssr: true,
   devtools: { enabled: false },
-  modules: ["@nuxt/content", "@nuxt/ui", "@nuxt/fonts", "@nuxtjs/sitemap", "nuxt-simple-robots"],
+  modules: ["@nuxt/content", "@nuxt/ui", "@nuxt/fonts", "@nuxtjs/sitemap", "@nuxtjs/seo"],
   runtimeConfig: {
     public: {
       posthogPublicKey: "phc_XdInqLt3eIBMxaliR7MeKhJnQD0SOl0GIjhpIJCpsnA",
@@ -36,11 +36,17 @@ export default defineNuxtConfig({
   site: {
     url: "https://thewebco.ai",
     name: "TheWebCo",
+    description: "Know your visitors & users",
+    defaultLocale: "en",
   },
   sitemap: {
     strictNuxtContentPaths: true,
   },
   nitro: {
     preset: "github_pages",
+    prerender: {
+      crawlLinks: true,
+      routes: ["/posts/2024/9/visitor-tracking", "/posts/2024/8/revolutionizing-online-security", "/posts/2024/7/user-attribution"],
+    },
   },
 });
