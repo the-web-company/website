@@ -1,6 +1,14 @@
 <script setup lang="ts">
 const route = useRoute();
 
+useHead({
+  meta: [{ name: "viewport", content: "width=device-width, initial-scale=1" }],
+  link: [{ rel: "icon", href: "/favicon.svg" }],
+  htmlAttrs: {
+    lang: "en",
+  },
+});
+
 useSeoMeta({
   ogSiteName: `TheWebCo AI${route.meta.title ? ` | ${route.meta.title}` : ""}`,
   title: `TheWebCo AI${route.meta.title ? ` | ${route.meta.title}` : ""}`,
@@ -13,16 +21,8 @@ useSeoMeta({
 
   twitterCard: "summary_large_image",
   twitterImage: "https://thewebco.ai/social-banner.webp",
-  twitterSite: "@TheWebCo",
-  twitterCreator: "@TheWebCo",
-});
-
-useHead({
-  meta: [{ name: "viewport", content: "width=device-width, initial-scale=1" }],
-  link: [{ rel: "icon", href: "/favicon.svg" }],
-  htmlAttrs: {
-    lang: "en",
-  },
+  twitterSite: "@thewebco_hq",
+  twitterCreator: "@thewebco_hq",
 });
 </script>
 
