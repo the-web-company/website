@@ -10,22 +10,13 @@ const selected =
   props.selected == "visitors" ? { label: "Visitors", icon: "i-heroicons-chart-bar" } : { label: "API & docs", icon: "i-heroicons-code-bracket" };
 let navigation = [
   { label: "Dashboard", icon: "i-heroicons-home" },
-  {
-    label: "Prospect & enrich",
-    items: [
-      { label: "Search", icon: "i-heroicons-magnifying-glass" },
-      { label: "Lists", icon: "i-heroicons-queue-list" },
-    ],
-  },
-  { label: "Insights", items: [{ label: "Meetings", icon: "i-heroicons-calendar-days" }] },
-  {
-    label: "Website",
-    items: [
-      { label: "Forms", icon: "i-heroicons-table-cells" },
-      { label: "Visitors", icon: "i-heroicons-chart-bar" },
-    ],
-  },
-  { label: "Developers", items: [{ label: "API & docs", icon: "i-heroicons-code-bracket" }] },
+  { label: "Visitors", icon: "i-heroicons-chart-bar" },
+  { label: "Search", icon: "i-heroicons-magnifying-glass" },
+  { label: "Lists", icon: "i-heroicons-queue-list" },
+  { label: "Campaigns", icon: "i-heroicons-megaphone" },
+  { label: "Forms", icon: "i-heroicons-table-cells" },
+  { label: "Meetings", icon: "i-heroicons-calendar-days" },
+  { label: "Developers", icon: "i-heroicons-code-bracket" },
   { label: "Settings", icon: "i-heroicons-cog" },
 ];
 </script>
@@ -39,38 +30,22 @@ let navigation = [
       <nav class="flex-1">
         <span v-for="(item, index) in navigation" :key="index">
           <div
-            v-if="!item.items"
             :class="[
-              item.label == selected.label ? 'bg-primary-500 text-gray-900' : 'hover:bg-primary-500 hover:text-primary-50',
-              'group flex items-center mx-1 md:mx-2 lg:mx-4 my-1 rounded-md p-2 cursor-pointer',
+              item.label == selected.label ? 'bg-primary-500 text-gray-50' : 'hover:bg-primary-500 hover:text-primary-50',
+              'group flex items-center mx-1 md:mx-2 my-1 rounded-md p-2 cursor-pointer',
             ]"
           >
             <UIcon
               :name="item.icon"
-              :class="[item.label == selected.label ? 'text-primary-500' : 'text-gray-900', 'w-4 h-4 sm:w-5 sm:h-5 group-hover:text-primary-50']"
+              :class="[item.label == selected.label ? 'text-gray-50' : 'text-gray-900', 'w-4 h-4 sm:w-5 sm:h-5 group-hover:text-primary-50']"
             />
-          </div>
-          <div v-else class="py-2">
-            <div
-              v-for="(itemRoute, indexRoute) of item.items"
-              :key="indexRoute"
-              :class="[
-                itemRoute.label == selected.label ? 'bg-primary-500 text-gray-900' : 'hover:bg-primary-500 hover:text-primary-50',
-                'group flex items-center mx-1 md:mx-2 lg:mx-4 my-1 rounded-md p-2 cursor-pointer',
-              ]"
-            >
-              <UIcon
-                :name="itemRoute.icon"
-                :class="[itemRoute.label == selected.label ? 'text-primary-50' : 'text-gray-900', 'w-4 h-4 sm:w-5 sm:h-5 group-hover:text-primary-50']"
-              />
-            </div>
           </div>
         </span>
         <div class="h-full rounded-tr-md"></div>
       </nav>
 
-      <div class="flex justify-between p-1 sm:p-2 lg:p-4">
-        <div class="flex items-center justify-center rounded-bl-md">
+      <div class="flex justify-center p-1 sm:p-2 mb-1">
+        <div class="flex items-center justify-center">
           <UAvatar src="/components/kristin-watson.webp" size="sm" />
         </div>
       </div>

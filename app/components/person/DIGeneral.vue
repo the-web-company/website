@@ -1,6 +1,13 @@
 <script setup lang="ts">
 import DiSocialLogo from "@/components/person/DlSocialLogo.vue";
 
+const props = defineProps({
+  shortList: {
+    type: Boolean,
+    default: false,
+  },
+});
+
 const person = {
   cover_picture: "/components/general-cover.webp",
   profile_picture: "/components/tom-cook.webp",
@@ -32,6 +39,10 @@ const person = {
   languages: ["English", "Spanish"],
   description: "",
 };
+
+if (props.shortList) {
+  person.sources = person.sources.slice(0, 5);
+}
 </script>
 
 <template>
