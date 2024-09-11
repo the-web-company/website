@@ -42,8 +42,8 @@ const menu = [
       <div class="xl:grid xl:grid-cols-5 xl:gap-8">
         <div class="flex flex-col sm:flex-row xl:flex-col justify-around items-center xl:items-start space-y-4 sm:space-y-0 xl:space-y-8 mb-4 xl:m-0">
           <NuxtLink class="flex items-center" to="/">
-            <h2 class="text-3xl font-extralight">TheWebC</h2>
-            <UIcon name="i-heroicons-globe-alt" class="h-8 w-8" />
+            <UIcon name="i-heroicons-square-3-stack-3d" class="h-8 w-8 mr-2" />
+            <h2 class="text-3xl font-extralight">TheWebCo</h2>
           </NuxtLink>
 
           <div class="flex space-x-6 items-center">

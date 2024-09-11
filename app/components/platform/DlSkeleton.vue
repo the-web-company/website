@@ -34,7 +34,7 @@ let navigation = [
   <div class="h-full w-full flex ring-1 ring-gray-200 rounded-md">
     <div class="w-fit flex flex-col bg-gray-50 rounded-l-md">
       <div class="flex items-center mx-auto pt-2 pb-4">
-        <UIcon name="i-heroicons-globe-alt" class="h-8 w-8" />
+        <UIcon name="i-heroicons-square-3-stack-3d" class="h-8 w-8" />
       </div>
       <nav class="flex-1">
         <span v-for="(item, index) in navigation" :key="index">

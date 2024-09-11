@@ -64,8 +64,8 @@ const mobileMenu = ref(false);
   >
     <div class="flex justify-between">
       <a href="/" rel="prefetch" class="flex items-center">
-        <h1 class="md:hidden lg:block text-xl md:text-2xl xl:text-3xl 3xl:text-4xl font-extralight">TheWebC</h1>
-        <UIcon name="i-heroicons-globe-alt" class="h-8 w-8" />
+        <UIcon name="i-heroicons-square-3-stack-3d" class="h-8 w-8 mr-2" />
+        <h1 class="md:hidden lg:block text-xl md:text-2xl xl:text-3xl 3xl:text-4xl font-extralight">TheWebCo</h1>
       </a>
 
       <div class="hidden md:flex gap-2 lg:gap-4 items-center">

@@ -2,7 +2,7 @@
   <UCard>
     <UBreadcrumb
       :links="[
-        { label: 'Add domain', icon: 'i-heroicons-globe-alt' },
+        { label: 'Add domain', icon: 'i-heroicons-square-3-stack-3d' },
         { label: 'Script installation', icon: 'i-heroicons-square-3-stack-3d' },
       ]"
       :ui="{ ol: 'gap-x-3', li: 'gap-x-3' }"
