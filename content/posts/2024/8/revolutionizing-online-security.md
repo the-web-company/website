@@ -7,7 +7,7 @@ authorTitle: "Co-Founder / CTO"
 authorPicture: "/authors/nir-galon.webp"
 authorLink: "https://nir.galons.io"
 category: "announcements"
-featuredImage: "/blog/2024/8/macbook-lid.jpg"
+featuredImage: "/blog/2024/8/macbook-lid.webp"
 ---
 
 In the ever-evolving digital landscape, security threats are becoming more sophisticated and harder to detect. With cybercriminals constantly devising new methods to exploit vulnerabilities, protecting online accounts and sensitive information has never been more crucial. Enter TheWebCo, the latest innovation in online security, designed to identify fraud, account sharing, account takeover, and paywall bypass with unprecedented accuracy and efficiency.
@@ -34,7 +34,7 @@ For content providers, maintaining the integrity of their paywalls is essential 
 
 It's a major threat when cybercriminals create fake accounts to exploit services. TheWebCo combats this and enables your to effectively prevents fraudulent accounts, ensuring only legitimate users access your platform and not abouse your services or pricing tier.
 
-![Security](/blog/2024/8/security.jpg)
+![Security](/blog/2024/8/security.webp)
 
 ## How TheWebCo Works
 

@@ -18,6 +18,26 @@ const { data } = await useAsyncData("contact", () => queryContent("/contact").fi
       </dl>
     </div>
 
-    <div id="contact-embedded-form" class="2xl:col-span-2" />
+    <div class="2xl:col-span-2 grid sm:grid-cols-2 gap-4 sm:gap-8 py-14">
+      <div class="rounded-md bg-gray-100 p-4">
+        <h3 class="text-lg">Collaborate</h3>
+        <a class="text-gray-500">collaborate@thewebco.ai</a>
+      </div>
+
+      <div class="rounded-md bg-gray-100 p-4">
+        <h3 class="text-lg">Press</h3>
+        <a class="text-gray-500">press@thewebco.ai</a>
+      </div>
+
+      <div class="rounded-md bg-gray-100 p-4">
+        <h3 class="text-lg">Join our team</h3>
+        <a class="text-gray-500">careers@thewebco.ai</a>
+      </div>
+
+      <div class="rounded-md bg-gray-100 p-4">
+        <h3 class="text-lg">Support</h3>
+        <a class="text-gray-500">support@thewebco.ai</a>
+      </div>
+    </div>
   </div>
 </template>

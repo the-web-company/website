@@ -1,6 +1,8 @@
 <script setup lang="ts">
 definePageMeta({ layout: "empty" });
 import DIGeneral from "@/components/person/DIGeneral.vue";
+import DlSkeleton from "@/components/platform/DlSkeleton.vue";
+import DiVisitors from "@/components/platform/DiVisitors.vue";
 
 const browserAttributes = [
   "fontsHash: bc2cf8dbfd44b881ae1442",
@@ -55,13 +57,13 @@ const howItWorks = [
         <h1 class="text-xl md:text-2xl xl:text-3xl 3xl:text-4xl font-extralight">TheWebCo</h1>
       </span>
 
-      <h2 class="text-3xl font-semibold leading-tight mt-6 text-gray-50">
+      <h2 class="text-3xl font-semibold leading-tight mt-10 text-gray-50">
         For <span class="bg-clip-text text-transparent bg-gradient-to-r from-primary-900 to-primary-600">the first time ever</span> you can actually know your
         visitors & users
       </h2>
-      <h3 class="text-gray-300 text-lg md:text-xl mt-2">Take actions based on their journey, what's important to them, and who they are.</h3>
+      <h3 class="text-gray-300 text-lg md:text-xl mt-4">Take actions based on their journey, what's important to them, and who they are.</h3>
 
-      <div class="mt-10">
+      <div class="mt-36">
         <div class="flex flex-col gap-6 md:gap-8 items-center">
           <div class="w-[23rem] overflow-x-hidden p-4 bg-primary-200 ring-1 ring-primary-300 z-20 rounded-md">
             <div class="flex flex-wrap gap-2 min-w-[40rem]">
@@ -72,7 +74,7 @@ const howItWorks = [
           </div>
 
           <div
-            class="bg-primary-200 ring-1 ring-primary-300 rounded-md w-fit p-4 flex justify-center items-center h-fit relative before:content-[''] before:w-20 before:border-b rotate-90 before:absolute before:bottom-1/2 before:border-primary-300 before:right-full after:content-[''] after:w-20 after:border-b after:absolute after:bottom-1/2 after:border-primary-300 after:left-full"
+            class="mt-10 bg-primary-200 ring-1 ring-primary-300 rounded-md w-fit p-4 flex justify-center items-center h-fit relative before:content-[''] before:w-20 before:border-b rotate-90 before:absolute before:bottom-1/2 before:border-primary-300 before:right-full after:content-[''] after:w-20 after:border-b after:absolute after:bottom-1/2 after:border-primary-300 after:left-full"
           >
             <svg class="h-10 w-10 md:h-14 md:w-14 fill-primary-500 -rotate-90" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
               <path
@@ -81,21 +83,21 @@ const howItWorks = [
             </svg>
           </div>
 
-          <div class="p-4 bg-primary-200 ring-1 ring-primary-300 rounded-md scale-75 -mt-10 w-[30rem]">
+          <div class="p-4 bg-primary-200 ring-1 ring-primary-300 rounded-md scale-75 w-[30rem]">
             <DIGeneral :short-list="true" class="w-full" />
           </div>
         </div>
       </div>
 
-      <div class="mt-16">
-        <h2 class="text-3xl font-semibold leading-tight text-gray-50">Contact</h2>
+      <div class="mt-36">
+        <h2 class="text-3xl font-semibold leading-tight text-gray-50 mb-2">Contact</h2>
 
-        <div class="ml-2 text-gray-50">
+        <div class="ml-2 space-y-1 text-gray-50">
           <p>Email: support@thewebco.ai</p>
           <p>Website: https://thewebco.ai</p>
         </div>
 
-        <div class="flex justify-end items-center gap-4">
+        <div class="flex justify-end items-center gap-4 mt-4">
           <NuxtLink href="https://x.com/thewebco_hq" target="_blank" class="text-gray-100">
             <span class="sr-only">Twitter / X</span>
             <svg class="h-4 w-4" fill="currentColor" viewBox="0 0 487.43 456.19">
@@ -127,10 +129,14 @@ const howItWorks = [
           </NuxtLink>
         </div>
       </div>
+
+      <div class="mt-20">
+        <p>second page</p>
+      </div>
     </div>
-    <div class="w-3/5 p-4 space-y-6 divide-y divide-primary-400">
+    <div class="w-3/5 p-4 space-y-12 divide-y divide-primary-400">
       <div>
-        <h2 class="text-xl text-center mb-1">Our vision</h2>
+        <h2 class="text-xl text-center my-4">Our vision</h2>
         <p>The Web Company is a group of humans working to make the internet open, transparent and safer place. But how?</p>
         <p class="mt-2">
           We're on a mission to reveal your anonymouse requests and give you actionable insights. For the first time ever you can actually see who your visitors
@@ -138,23 +144,23 @@ const howItWorks = [
         </p>
       </div>
 
-      <div class="pt-4">
-        <h2 class="text-xl text-center mb-1">Some of the things you can do once you know the visitor</h2>
-        <div class="grid gap-4 grid-cols-2 mt-2">
-          <div v-for="(item, index) of useCase" :key="index" class="p-2">
+      <div class="pt-12">
+        <h2 class="text-xl text-center mb-4">Some of the things you can do once you know the visitor</h2>
+        <div class="grid gap-4 grid-cols-2">
+          <div v-for="(item, index) of useCase" :key="index" class="py-4 px-2">
             <UIcon :name="item.icon" class="h-7 w-7" />
             <p>{{ item.text }}</p>
           </div>
         </div>
       </div>
 
-      <div class="pt-4">
-        <h2 class="text-xl text-center mb-1">How it works</h2>
+      <div class="pt-12">
+        <h2 class="text-xl text-center mb-4">How it works</h2>
         <ul class="list-decimal ml-5">
           <li v-for="(item, index) of howItWorks" :key="index" class="py-1">{{ item }}</li>
         </ul>
 
-        <div class="flex items-center h-40 px-20">
+        <div class="flex items-center h-52 px-20">
           <h2 class="text-center text-3xl font-semibold leading-tight bg-clip-text text-transparent bg-gradient-to-r from-primary-800 to-primary-200">
             Turn anonymous data into insights & impactful actions.
           </h2>

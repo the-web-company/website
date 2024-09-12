@@ -209,4 +209,8 @@ nav .active {
   content: "";
   @apply block h-2;
 }
+
+.blog-content :deep(pre) {
+  @apply mt-1 text-gray-600 dark:text-gray-400 bg-gray-200 dark:bg-gray-800 rounded-md p-2;
+}
 </style>

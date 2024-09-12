@@ -89,8 +89,8 @@ const menu = [
           </div>
         </div>
 
-        <div class="col-start-3 col-span-3 grid grid-cols-2 md:grid-cols-4">
-          <div v-for="(item, index) of menu" :key="index" class="flex flex-col items-center">
+        <div class="col-start-3 col-span-3 grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-0">
+          <div v-for="(item, index) of menu" :key="index" class="flex flex-col text-center">
             <ul class="space-y-3">
               <h3 class="text-sm font-semibold">{{ item.label }}</h3>
               <li v-for="(child, childIndex) of item.children" :key="childIndex">

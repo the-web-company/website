@@ -7,7 +7,7 @@ authorTitle: "Co-Founder / CTO"
 authorPicture: "/authors/nir-galon.webp"
 authorLink: "https://nir.galons.io"
 category: "marketing"
-featuredImage: "/blog/2024/7/connections.jpg"
+featuredImage: "/blog/2024/7/connections.webp"
 ---
 
 As the digital landscape evolves, so do the methods and technologies used to track user behavior online. One significant shift currently taking place is Google's decision to remove third-party cookies from its Chrome browser by 2024. This move marks a substantial change in how user attribution—identifying and attributing actions to specific users—is managed. Let's delve into what this means for marketers, advertisers, and anyone relying on web analytics.
@@ -18,7 +18,7 @@ As the digital landscape evolves, so do the methods and technologies used to tra
 
 Cookies are small pieces of data stored on a user's browser that track information about their browsing habits. Third-party cookies are created by domains other than the one the user is visiting directly. These cookies are commonly used by advertisers to track users across multiple sites, building detailed profiles to deliver personalized ads.
 
-![Cookies](/blog/2024/7/cookies.jpg)
+![Cookies](/blog/2024/7/cookies.webp)
 
 ## Google's Decision to Remove Third-Party Cookies
 
