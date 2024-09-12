@@ -37,6 +37,14 @@ const useCase = [
     text: "Personalize the buying experience to each individual by delivering personalized content and offers.",
   },
 ];
+
+const howItWorks = [
+  "Register to our platform",
+  "Create a new project and add the domain",
+  "Add our script to your website",
+  "Start to see who visits your website",
+  "Get the unique id of the visitor to uniquely know who they are",
+];
 </script>
 
 <template>
@@ -44,7 +52,7 @@ const useCase = [
     <div class="w-2/5 bg-primary-500 p-4">
       <span class="flex items-center text-gray-50">
         <UIcon name="i-heroicons-square-3-stack-3d" class="h-8 w-8 mr-2" />
-        <h1 class="md:hidden lg:block text-xl md:text-2xl xl:text-3xl 3xl:text-4xl font-extralight">TheWebCo</h1>
+        <h1 class="text-xl md:text-2xl xl:text-3xl 3xl:text-4xl font-extralight">TheWebCo</h1>
       </span>
 
       <h2 class="text-3xl font-semibold leading-tight mt-6 text-gray-50">
@@ -53,7 +61,7 @@ const useCase = [
       </h2>
       <h3 class="text-gray-300 text-lg md:text-xl mt-2">Take actions based on their journey, what's important to them, and who they are.</h3>
 
-      <div class="mt-6">
+      <div class="mt-10">
         <div class="flex flex-col gap-6 md:gap-8 items-center">
           <div class="w-[23rem] overflow-x-hidden p-4 bg-primary-200 ring-1 ring-primary-300 z-20 rounded-md">
             <div class="flex flex-wrap gap-2 min-w-[40rem]">
@@ -78,8 +86,49 @@ const useCase = [
           </div>
         </div>
       </div>
+
+      <div class="mt-16">
+        <h2 class="text-3xl font-semibold leading-tight text-gray-50">Contact</h2>
+
+        <div class="ml-2 text-gray-50">
+          <p>Email: support@thewebco.ai</p>
+          <p>Website: https://thewebco.ai</p>
+        </div>
+
+        <div class="flex justify-end items-center gap-4">
+          <NuxtLink href="https://x.com/thewebco_hq" target="_blank" class="text-gray-100">
+            <span class="sr-only">Twitter / X</span>
+            <svg class="h-4 w-4" fill="currentColor" viewBox="0 0 487.43 456.19">
+              <path
+                id="path1009"
+                class="cls-1"
+                d="M7.48,21.9,195.66,273.57,6.29,478.1H48.91L214.71,299l134,179.11h145L294.93,212.33,471.2,21.9H428.58L275.89,186.82,152.51,21.9ZM70.16,53.3h66.63L431,446.7H364.39Z"
+                transform="translate(-6.29 -21.9)"
+              />
+            </svg>
+          </NuxtLink>
+          <NuxtLink href="https://www.linkedin.com/company/thewebco" target="_blank" class="text-gray-100">
+            <span class="sr-only">LinkedIn</span>
+            <svg class="h-5 w-5" fill="currentColor" height="1em" viewBox="0 0 448 512" aria-hidden="true">
+              <path
+                d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"
+              />
+            </svg>
+          </NuxtLink>
+          <NuxtLink href="https://www.youtube.com/channel/the-web-company" target="_blank" class="text-gray-100">
+            <span class="sr-only">YouTube</span>
+            <svg class="h-8 w-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path
+                fill-rule="evenodd"
+                d="M19.812 5.418c.861.23 1.538.907 1.768 1.768C21.998 8.746 22 12 22 12s0 3.255-.418 4.814a2.504 2.504 0 0 1-1.768 1.768c-1.56.419-7.814.419-7.814.419s-6.255 0-7.814-.419a2.505 2.505 0 0 1-1.768-1.768C2 15.255 2 12 2 12s0-3.255.417-4.814a2.507 2.507 0 0 1 1.768-1.768C5.744 5 11.998 5 11.998 5s6.255 0 7.814.418ZM15.194 12 10 15V9l5.194 3Z"
+                clip-rule="evenodd"
+              />
+            </svg>
+          </NuxtLink>
+        </div>
+      </div>
     </div>
-    <div class="w-3/5 p-4 space-y-4 divide-y divide-primary-400">
+    <div class="w-3/5 p-4 space-y-6 divide-y divide-primary-400">
       <div>
         <h2 class="text-xl text-center mb-1">Our vision</h2>
         <p>The Web Company is a group of humans working to make the internet open, transparent and safer place. But how?</p>
@@ -89,13 +138,26 @@ const useCase = [
         </p>
       </div>
 
-      <div class="pt-2">
+      <div class="pt-4">
         <h2 class="text-xl text-center mb-1">Some of the things you can do once you know the visitor</h2>
         <div class="grid gap-4 grid-cols-2 mt-2">
           <div v-for="(item, index) of useCase" :key="index" class="p-2">
             <UIcon :name="item.icon" class="h-7 w-7" />
             <p>{{ item.text }}</p>
           </div>
+        </div>
+      </div>
+
+      <div class="pt-4">
+        <h2 class="text-xl text-center mb-1">How it works</h2>
+        <ul class="list-decimal ml-5">
+          <li v-for="(item, index) of howItWorks" :key="index" class="py-1">{{ item }}</li>
+        </ul>
+
+        <div class="flex items-center h-40 px-20">
+          <h2 class="text-center text-3xl font-semibold leading-tight bg-clip-text text-transparent bg-gradient-to-r from-primary-800 to-primary-200">
+            Turn anonymous data into insights & impactful actions.
+          </h2>
         </div>
       </div>
     </div>
