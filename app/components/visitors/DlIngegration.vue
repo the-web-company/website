@@ -2,8 +2,8 @@
   <UCard>
     <UBreadcrumb
       :links="[
-        { label: 'Add domain', icon: 'i-heroicons-square-3-stack-3d' },
-        { label: 'Script installation', icon: 'i-heroicons-square-3-stack-3d' },
+        { label: 'Add domain', icon: 'i-heroicons-plus' },
+        { label: 'Script installation', icon: 'i-heroicons-puzzle-piece' },
       ]"
       :ui="{ ol: 'gap-x-3', li: 'gap-x-3' }"
     >

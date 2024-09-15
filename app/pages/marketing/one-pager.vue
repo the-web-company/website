@@ -53,7 +53,7 @@ const howItWorks = [
   <div class="flex">
     <div class="w-2/5 bg-primary-500 p-4">
       <span class="flex items-center text-gray-50">
-        <UIcon name="i-heroicons-square-3-stack-3d" class="h-8 w-8 mr-2" />
+        <img src="/favicon.svg" class="h-8 w-8 mr-2" />
         <h1 class="text-xl md:text-2xl xl:text-3xl 3xl:text-4xl font-extralight">TheWebCo</h1>
       </span>
 
