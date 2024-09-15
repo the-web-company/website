@@ -76,7 +76,7 @@ const menu = [
                 />
               </svg>
             </NuxtLink>
-            <NuxtLink href="https://www.youtube.com/channel/the-web-company" target="_blank" class="text-gray-400 hover:text-gray-600">
+            <NuxtLink href="https://www.youtube.com/@thewebco_hq" target="_blank" class="text-gray-400 hover:text-gray-600">
               <span class="sr-only">YouTube</span>
               <svg class="h-9 w-9" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                 <path
