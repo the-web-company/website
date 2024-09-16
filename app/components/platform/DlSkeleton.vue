@@ -25,7 +25,7 @@ let navigation = [
   <div class="h-full w-full flex ring-1 ring-gray-200 rounded-md">
     <div class="w-fit flex flex-col bg-gray-50 rounded-l-md">
       <div class="flex items-center mx-auto pt-2 pb-4">
-        <img src="/favicon.svg" class="h-8 w-8" />
+        <img src="/favicon.svg" class="h-8 w-8" alt="TheWebCo logo" />
       </div>
       <nav class="flex-1">
         <span v-for="(item, index) in navigation" :key="index">
@@ -46,7 +46,7 @@ let navigation = [
 
       <div class="flex justify-center p-1 sm:p-2 mb-1">
         <div class="flex items-center justify-center">
-          <UAvatar src="/components/kristin-watson.webp" size="sm" />
+          <UAvatar src="/components/kristin-watson.webp" size="sm" alt="dummy profile image" />
         </div>
       </div>
     </div>

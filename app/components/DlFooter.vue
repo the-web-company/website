@@ -42,7 +42,7 @@ const menu = [
       <div class="xl:grid xl:grid-cols-5 xl:gap-8">
         <div class="flex flex-col sm:flex-row xl:flex-col justify-around items-center xl:items-start space-y-4 sm:space-y-0 xl:space-y-8 mb-4 xl:m-0">
           <NuxtLink class="flex items-center" to="/">
-            <img src="/favicon.svg" class="h-8 w-8 mr-2" />
+            <img src="/favicon.svg" class="h-8 w-8 mr-2" alt="TheWebCo logo" />
             <h2 class="text-3xl font-extralight">TheWebCo</h2>
           </NuxtLink>
 
@@ -91,8 +91,8 @@ const menu = [
 
         <div class="col-start-3 col-span-3 grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-0">
           <div v-for="(item, index) of menu" :key="index" class="flex flex-col text-center">
+            <h3 class="text-sm font-semibold mb-2">{{ item.label }}</h3>
             <ul class="space-y-3">
-              <h3 class="text-sm font-semibold">{{ item.label }}</h3>
               <li v-for="(child, childIndex) of item.children" :key="childIndex">
                 <NuxtLink :to="child.to" class="duration-300 ease-in-out text-gray-500 hover:text-gray-500 text-sm">{{ child.label }}</NuxtLink>
               </li>

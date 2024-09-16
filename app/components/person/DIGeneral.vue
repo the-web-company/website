@@ -48,8 +48,8 @@ if (props.shortList) {
 <template>
   <div class="group bg-gray-100 rounded-md h-full">
     <div class="relative">
-      <img :src="person.cover_picture" class="rounded-tl-md rounded-tr-md w-full h-14 object-cover" />
-      <img :src="person.profile_picture" class="rounded-full w-20 h-20 absolute top-6 left-10 ring-2 ring-gray-100" />
+      <img :src="person.cover_picture" class="rounded-tl-md rounded-tr-md w-full h-14 object-cover" alt="profile banner" loading="lazy" />
+      <img :src="person.profile_picture" class="rounded-full w-20 h-20 absolute top-6 left-10 ring-2 ring-gray-100" alt="profile banner" loading="lazy" />
       <h2 class="text-xl font-medium capitalize mt-2 mb-4 ml-36">{{ person.first_name }} {{ person.last_name }}</h2>
     </div>
 
@@ -57,9 +57,9 @@ if (props.shortList) {
       <section class="col-span-3 md:col-span-1 md:row-start-1 md:col-start-4">
         <p class="font-medium text-sm">Social Networks</p>
         <span class="w-fit flex flex-wrap gap-2 2xl:gap-4">
-          <a v-for="(item, index) of person.sources" :key="index" :class="[index > 6 ? 'hidden sm:block' : '']">
+          <span v-for="(item, index) of person.sources" :key="index" :class="[index > 6 ? 'hidden sm:block' : '']">
             <DiSocialLogo :name="item" class="!h-6 !w-6 cursor-pointer" />
-          </a>
+          </span>
         </span>
       </section>
 

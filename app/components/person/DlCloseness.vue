@@ -42,15 +42,15 @@ const localState = reactive({
 });
 
 const items = [
-  { label: "users", icon: "i-heroicons-users" },
-  { label: "work", icon: "i-heroicons-briefcase" },
-  { label: "school", icon: "i-heroicons-academic-cap" },
-  { label: "events", icon: "i-heroicons-calendar" },
-  { label: "code", icon: "i-heroicons-code-bracket" },
+  { label: "users", iconName: "i-heroicons-users" },
+  { label: "work", iconName: "i-heroicons-briefcase" },
+  { label: "school", iconName: "i-heroicons-academic-cap" },
+  { label: "events", iconName: "i-heroicons-calendar" },
+  { label: "code", iconName: "i-heroicons-code-bracket" },
 ];
 
 const currentTab = computed(() => {
-  return items[Number(localState.tab)].label as "users" | "work" | "school" | "events" | "code";
+  return items[Number(localState.tab)]?.label as "users" | "work" | "school" | "events" | "code";
 });
 </script>
 
@@ -58,7 +58,7 @@ const currentTab = computed(() => {
   <div class="bg-gray-100 rounded-md py-2 px-2 xl:px-6 2xl:px-8" @mouseover="localState.tab = 1" @mouseleave="localState.tab = 0">
     <div class="flex items-center justify-between w-full h-full">
       <div class="z-20 relative">
-        <img :src="results.start.picture" class="w-14 h-14 sm:w-20 sm:h-20 md:w-28 md:h-28 3xl:w-32 3xl:h-32 rounded-full object-cover" />
+        <img :src="results.start.picture" class="w-14 h-14 sm:w-20 sm:h-20 md:w-28 md:h-28 3xl:w-32 3xl:h-32 rounded-full object-cover" alt="apple logo" />
       </div>
 
       <div
@@ -67,7 +67,7 @@ const currentTab = computed(() => {
         <UTabs :items="items" v-model="localState.tab">
           <template #default="{ item, index, selected }">
             <div class="flex items-center gap-1 md:gap-2 relative truncate md:px-2">
-              <UIcon :name="item.icon" class="w-3 h-3 sm:w-4 sm:h-4 md:w-5 md:h-5 flex-shrink-0" />
+              <UIcon :name="item.iconName" class="w-3 h-3 sm:w-4 sm:h-4 md:w-5 md:h-5 flex-shrink-0" />
               <span v-if="selected" class="absolute -right-4 w-2 h-2 rounded-full bg-rose-500" />
             </div>
           </template>
@@ -83,7 +83,7 @@ const currentTab = computed(() => {
           </li>
 
           <li class="flex p-2 md:py-4" v-for="(item, index) of localState[currentTab]" :key="index">
-            <img class="h-8 w-8 md:h-10 md:w-10 rounded-full" :src="item.picture" />
+            <img class="h-8 w-8 md:h-10 md:w-10 rounded-full" :src="item.picture" alt="profile picture" />
             <div class="ml-3 flex flex-col justify-center">
               <p class="text-sm">{{ item.name }}</p>
               <p class="text-sm text-gray-500 hidden sm:block">{{ item.title }}</p>
@@ -106,7 +106,7 @@ const currentTab = computed(() => {
       <div
         class="text-right relative before:content-[''] before:w-28 sm:before:w-32 md:before:w-44 lg:before:w-48 xl:before:w-72 3xl:before:w-80 before:border-b before:absolute before:top-1/2 before:border-gray-300 before:right-full"
       >
-        <img :src="results.end.picture" class="w-14 h-14 sm:w-20 sm:h-20 md:w-28 md:h-28 3xl:w-32 3xl:h-32 rounded-full object-cover" />
+        <img :src="results.end.picture" class="w-14 h-14 sm:w-20 sm:h-20 md:w-28 md:h-28 3xl:w-32 3xl:h-32 rounded-full object-cover" alt="profile picture" />
       </div>
     </div>
   </div>

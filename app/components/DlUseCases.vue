@@ -26,7 +26,7 @@ const useCases = [
     <h3 class="text-3xl xl:text-4xl mb-10">Some of the things we can do</h3>
 
     <div class="sm:mx-8">
-      <dl class="grid mx-auto sm:max-w-4xl grid-cols-1 gap-x-8 gap-y-10 md:gap-y-16 md:grid-cols-2 lg:max-w-none lg:grid-cols-3">
+      <div class="grid mx-auto sm:max-w-4xl grid-cols-1 gap-x-8 gap-y-10 md:gap-y-16 md:grid-cols-2 lg:max-w-none lg:grid-cols-3">
         <div class="flex flex-col space-y-4 md:space-y-6 ring-1 ring-primary-300 bg-primary-200 p-4 rounded-md" v-for="(item, index) of useCases" :key="index">
           <div class="flex items-center justify-center rounded-md bg-primary-300 p-2 w-fit">
             <UIcon :name="item.icon" class="bg-primary-600 h-6 w-6" />
@@ -39,7 +39,7 @@ const useCases = [
 
           <NuxtLink class="text-primary-500 hover:text-primary-600" :to="item.to"> Learn more <span aria-hidden="true">→</span> </NuxtLink>
         </div>
-      </dl>
+      </div>
     </div>
   </div>
 </template>

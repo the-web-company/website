@@ -59,7 +59,7 @@ const companies = [
       <div class="mt-2 divide-y divide-gray-300 flex flex-col">
         <div v-for="(company, index) of companies" :key="index" class="flex justify-between p-2 hover:bg-gray-50 cursor-pointer">
           <div class="flex items-center gap-4">
-            <UAvatar :src="company.logo" :alt="company.name" />
+            <UAvatar :src="company.logo" :alt="`${company.name} logo`" loading="lazy" />
             <div class="flex flex-col justify-around">
               <h3>{{ company.name }}</h3>
               <p class="text-gray-500 text-sm">{{ company.subtitle.length > 80 ? `${company.subtitle.slice(0, 80)}...` : company.subtitle }}</p>
@@ -73,7 +73,7 @@ const companies = [
             </div>
 
             <div class="z-10">
-              <UButton variant="ghost" squere trailing-icon="i-heroicons-briefcase" />
+              <UButton variant="ghost" squere trailing-icon="i-heroicons-briefcase" :aria-label="`to ${company.name} profile`" />
             </div>
           </div>
         </div>

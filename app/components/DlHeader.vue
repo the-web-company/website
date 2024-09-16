@@ -64,7 +64,7 @@ const mobileMenu = ref(false);
   >
     <div class="flex justify-between">
       <a href="/" rel="prefetch" class="flex items-center">
-        <img src="/favicon.svg" class="h-8 w-8 mr-2" />
+        <img src="/favicon.svg" class="h-8 w-8 mr-2" alt="TheWebCo logo" />
         <h1 class="md:hidden lg:block text-xl md:text-2xl xl:text-3xl 3xl:text-4xl font-extralight">TheWebCo</h1>
       </a>
 

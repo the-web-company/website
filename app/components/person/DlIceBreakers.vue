@@ -15,7 +15,7 @@ const messages = [
   <div class="group bg-gray-100 rounded-md p-2 h-full">
     <div class="flex flex-col h-full w-full justify-between gap-2">
       <div :class="[index > 3 ? 'hidden md:flex' : '', 'flex items-end']" v-for="(message, index) of messages" :key="index">
-        <UAvatar src="/components/kristin-watson.webp" />
+        <UAvatar src="/components/kristin-watson.webp" alt="dummy profile image" />
         <div class="flex items-end overflow-hidden">
           <span class="h-4 w-4 border-t-[15px] border-t-transparent border-r-[15px] border-r-gray-200 border-b-0 border-b-transparent bottom-0"></span>
           <p v-if="!message.length" class="p-2 bg-gray-200 rounded-t-md rounded-br-md text-sm xl:text-base">{{ message.value }}</p>

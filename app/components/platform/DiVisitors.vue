@@ -177,7 +177,7 @@ const people = [
                 </div>
 
                 <div class="z-10">
-                  <UButton variant="ghost" squere trailing-icon="i-heroicons-briefcase" />
+                  <UButton variant="ghost" squere trailing-icon="i-heroicons-briefcase" :aria-label="`to ${company.name} profile`" />
                 </div>
               </div>
             </div>
@@ -253,7 +253,7 @@ const people = [
 
           <template #go_to_profile-data="{ row }">
             <div class="z-10">
-              <UButton icon="i-heroicons-identification" size="sm" square variant="ghost" />
+              <UButton icon="i-heroicons-identification" size="sm" square variant="ghost" :aria-label="`to ${row.name} profile`" />
             </div>
           </template>
         </UTable>
