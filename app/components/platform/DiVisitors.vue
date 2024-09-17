@@ -1,13 +1,6 @@
 <script setup lang="ts">
 import DlSocialLogo from "@/components/person/DlSocialLogo.vue";
 
-const highLevelStats = [
-  { label: "Unique anon visitors", icon: "i-heroicons-user-group", value: 1452 },
-  { label: "Familiar visitors", icon: "i-heroicons-identification", value: 1162 },
-  { label: "Visitors already in your CRM", icon: "i-heroicons-funnel", value: 146 },
-  { label: "Visitors with warm intro", icon: "i-heroicons-share", value: 581 },
-];
-
 const days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
 const hours = ["0", "2", "4", "6", "8", "10", "12", "14", "16", "18", "20", "22"];
 const matrix = [
@@ -31,37 +24,6 @@ const colors = [
   "bg-primary-800",
   "bg-primary-900",
   "bg-primary-950",
-];
-
-const companies = [
-  {
-    name: "Apple",
-    title: "A diverse collective of thinkers and doers, continually reimagining what’s possible.",
-    profile_image: "/companies/apple.webp",
-    visits: 442,
-    visitors: 182,
-  },
-  {
-    name: "Tesla",
-    title: "To accelerate the advent of sustainable transport",
-    profile_image: "/companies/tesla.webp",
-    visits: 371,
-    visitors: 138,
-  },
-  {
-    name: "OpenAI",
-    title: "OpenAI’s mission is to ensure that artificial general intelligence benefits all of humanity.",
-    profile_image: "/companies/openai.webp",
-    visits: 229,
-    visitors: 37,
-  },
-  {
-    name: "Monday.com",
-    title: "Your go-to work platform",
-    profile_image: "/companies/monday-com.webp",
-    visits: 193,
-    visitors: 32,
-  },
 ];
 
 const referrers = [
@@ -112,15 +74,54 @@ const people = [
 
 <template>
   <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-2">
-    <UCard v-for="(item, index) of highLevelStats" :key="index" :ui="{ body: { padding: '!px-3 !py-4' } }" :class="[index > 1 ? 'hidden sm:block' : '']">
+    <UCard :ui="{ body: { padding: '!px-3 !py-4' } }" class="hidden sm:block">
       <div class="flex gap-2 items-center">
         <div class="px-2 py-1">
-          <UIcon :name="item.icon" class="md:h-6 md:w-6 text-gray-500" />
+          <UIcon name="i-heroicons-user-group" class="md:h-6 md:w-6 text-gray-500" />
         </div>
 
         <div class="flex flex-col justify-around">
-          <h3 class="text-sm text-gray-500">{{ item.label }}</h3>
-          <p class="text-xl font-medium">{{ item.value }}</p>
+          <h3 class="text-sm text-gray-500">Unique anon visitors</h3>
+          <p class="text-xl font-medium">1452</p>
+        </div>
+      </div>
+    </UCard>
+
+    <UCard :ui="{ body: { padding: '!px-3 !py-4' } }" class="hidden sm:block">
+      <div class="flex gap-2 items-center">
+        <div class="px-2 py-1">
+          <UIcon name="i-heroicons-identification" class="md:h-6 md:w-6 text-gray-500" />
+        </div>
+
+        <div class="flex flex-col justify-around">
+          <h3 class="text-sm text-gray-500">Familiar visitors</h3>
+          <p class="text-xl font-medium">1452</p>
+        </div>
+      </div>
+    </UCard>
+
+    <UCard :ui="{ body: { padding: '!px-3 !py-4' } }">
+      <div class="flex gap-2 items-center">
+        <div class="px-2 py-1">
+          <UIcon name="i-heroicons-funnel" class="md:h-6 md:w-6 text-gray-500" />
+        </div>
+
+        <div class="flex flex-col justify-around">
+          <h3 class="text-sm text-gray-500">Visitors already in your CRM</h3>
+          <p class="text-xl font-medium">146</p>
+        </div>
+      </div>
+    </UCard>
+
+    <UCard :ui="{ body: { padding: '!px-3 !py-4' } }">
+      <div class="flex gap-2 items-center">
+        <div class="px-2 py-1">
+          <UIcon name="i-heroicons-share" class="md:h-6 md:w-6 text-gray-500" />
+        </div>
+
+        <div class="flex flex-col justify-around">
+          <h3 class="text-sm text-gray-500">Visitors with warm intro</h3>
+          <p class="text-xl font-medium">581</p>
         </div>
       </div>
     </UCard>
@@ -161,23 +162,86 @@ const people = [
           <h2 class="font-medium">Companies</h2>
 
           <div class="mt-2 divide-y divide-gray-300 flex flex-col">
-            <div v-for="(company, index) of companies" :key="index" class="grid grid-cols-8 p-2 hover:bg-gray-50 cursor-pointer">
+            <div class="grid grid-cols-8 p-2 hover:bg-gray-50 cursor-pointer">
               <div class="flex items-center gap-4 col-span-5">
-                <UAvatar :src="company.profile_image" :alt="company.name" />
+                <UAvatar src="/companies/apple.webp" alt="Apple logo" />
                 <div class="flex flex-col justify-around">
-                  <h3 class="text-sm">{{ company.name }}</h3>
-                  <p class="text-gray-500 text-xs line-clamp-1">{{ company.title }}</p>
+                  <h3 class="text-sm">Apple</h3>
+                  <p class="text-gray-500 text-xs line-clamp-1">A diverse collective of thinkers and doers, continually reimagining what’s possible.</p>
                 </div>
               </div>
 
               <div class="flex justify-end items-center gap-4 text-gray-500 col-span-3">
                 <div class="flex flex-col justify-around text-xs">
-                  <p class="hidden sm:block lg:hidden xl:block">{{ company.visits }} visits</p>
-                  <p>{{ company.visitors }} visitors</p>
+                  <p class="hidden sm:block lg:hidden xl:block">442 visits</p>
+                  <p>182 visitors</p>
                 </div>
 
                 <div class="z-10">
-                  <UButton variant="ghost" squere trailing-icon="i-heroicons-briefcase" :aria-label="`to ${company.name} profile`" />
+                  <UButton variant="ghost" squere trailing-icon="i-heroicons-briefcase" aria-label="to Apple profile" />
+                </div>
+              </div>
+            </div>
+
+            <div class="grid grid-cols-8 p-2 hover:bg-gray-50 cursor-pointer">
+              <div class="flex items-center gap-4 col-span-5">
+                <UAvatar src="/companies/tesla.webp" alt="Tesla logo" />
+                <div class="flex flex-col justify-around">
+                  <h3 class="text-sm">Tesla</h3>
+                  <p class="text-gray-500 text-xs line-clamp-1">To accelerate the advent of sustainable transport</p>
+                </div>
+              </div>
+
+              <div class="flex justify-end items-center gap-4 text-gray-500 col-span-3">
+                <div class="flex flex-col justify-around text-xs">
+                  <p class="hidden sm:block lg:hidden xl:block">371 visits</p>
+                  <p>138 visitors</p>
+                </div>
+
+                <div class="z-10">
+                  <UButton variant="ghost" squere trailing-icon="i-heroicons-briefcase" aria-label="to Tesla profile" />
+                </div>
+              </div>
+            </div>
+
+            <div class="grid grid-cols-8 p-2 hover:bg-gray-50 cursor-pointer">
+              <div class="flex items-center gap-4 col-span-5">
+                <UAvatar src="/companies/openai.webp" alt="OpenAI logo" />
+                <div class="flex flex-col justify-around">
+                  <h3 class="text-sm">OpenAI</h3>
+                  <p class="text-gray-500 text-xs line-clamp-1">OpenAI’s mission is to ensure that artificial general intelligence benefits all of humanity.</p>
+                </div>
+              </div>
+
+              <div class="flex justify-end items-center gap-4 text-gray-500 col-span-3">
+                <div class="flex flex-col justify-around text-xs">
+                  <p class="hidden sm:block lg:hidden xl:block">229 visits</p>
+                  <p>37 visitors</p>
+                </div>
+
+                <div class="z-10">
+                  <UButton variant="ghost" squere trailing-icon="i-heroicons-briefcase" aria-label="to OpenAI profile" />
+                </div>
+              </div>
+            </div>
+
+            <div class="grid grid-cols-8 p-2 hover:bg-gray-50 cursor-pointer">
+              <div class="flex items-center gap-4 col-span-5">
+                <UAvatar src="/companies/monday-com.webp" alt="Monday.com logo" />
+                <div class="flex flex-col justify-around">
+                  <h3 class="text-sm">Monday.com</h3>
+                  <p class="text-gray-500 text-xs line-clamp-1">Your go-to work platform</p>
+                </div>
+              </div>
+
+              <div class="flex justify-end items-center gap-4 text-gray-500 col-span-3">
+                <div class="flex flex-col justify-around text-xs">
+                  <p class="hidden sm:block lg:hidden xl:block">193 visits</p>
+                  <p>32 visitors</p>
+                </div>
+
+                <div class="z-10">
+                  <UButton variant="ghost" squere trailing-icon="i-heroicons-briefcase" aria-label="to Monday.com profile" />
                 </div>
               </div>
             </div>

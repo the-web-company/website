@@ -1,33 +1,28 @@
 <script setup lang="ts">
 import DIGeneral from "@/components/person/DIGeneral.vue";
-
-const browserAttributes = [
-  "fontsHash: bc2cf8dbfd44b881ae1442",
-  "webglHash: e13f2a699976dad7ca9068",
-  "hardwareConcurrency: 8",
-  "userAgent: Mozilla/5.0 (Win...",
-  "screenWidth: 1920",
-  "screenHeight: 1080",
-  "localStorage: true",
-  "language: en-US",
-  "timeZone: America/New_York",
-  "indexedDB: true",
-  "canvasHash: f68f86fd4d9e8f3ee0fefd",
-  "cookiesEnabled: true",
-  "audioSampleRate: 48000",
-  "screenColorDepth: 24",
-  "audioChannelCount: 2",
-  "vendor: Google Inc.",
-];
 </script>
 
 <template>
   <div class="flex flex-col lg:flex-row gap-6 md:gap-8 lg:gap-16 items-center">
     <div class="max-w-64 md:max-w-80 lg:max-w-96 xl:max-w-md overflow-x-hidden p-4 bg-primary-200 ring-1 ring-primary-300 z-20 rounded-md">
       <div class="flex flex-wrap gap-2 min-w-[40rem]">
-        <div v-for="(value, index) of [...browserAttributes]" :key="index">
-          <UBadge>{{ value }}</UBadge>
-        </div>
+        <div><UBadge>fontsHash: bc2cf8dbfd44b881ae1442</UBadge></div>
+        <div><UBadge>webglHash: e13f2a699976dad7ca9068</UBadge></div>
+        <div><UBadge>hardwareConcurrency: 8</UBadge></div>
+        <div><UBadge>userAgent: Mozilla/5.0 (Win...</UBadge></div>
+        <div><UBadge>screenWidth: 1920</UBadge></div>
+        <div><UBadge>screenHeight: 1080</UBadge></div>
+        <div><UBadge>localStorage: true</UBadge></div>
+        <div><UBadge>language: en-US</UBadge></div>
+        <div><UBadge>timeZone: America/New_York</UBadge></div>
+        <div><UBadge>indexedDB: true</UBadge></div>
+        <div><UBadge>canvasHash: f68f86fd4d9e8f3ee0fefd</UBadge></div>
+        <div><UBadge>cookiesEnabled: true</UBadge></div>
+        <div><UBadge>audioSampleRate: 48000</UBadge></div>
+        <div><UBadge>screenColorDepth: 24</UBadge></div>
+        <div><UBadge>audioChannelCount: 2</UBadge></div>
+        <div><UBadge>vendor: Google Inc.</UBadge></div>
+        <div><UBadge>sessionStorage: true</UBadge></div>
       </div>
     </div>
 

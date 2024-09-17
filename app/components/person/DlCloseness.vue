@@ -58,7 +58,12 @@ const currentTab = computed(() => {
   <div class="bg-gray-100 rounded-md py-2 px-2 xl:px-6 2xl:px-8" @mouseover="localState.tab = 1" @mouseleave="localState.tab = 0">
     <div class="flex items-center justify-between w-full h-full">
       <div class="z-20 relative">
-        <img :src="results.start.picture" class="w-14 h-14 sm:w-20 sm:h-20 md:w-28 md:h-28 3xl:w-32 3xl:h-32 rounded-full object-cover" alt="apple logo" />
+        <img
+          :src="results.start.picture"
+          loading="lazy"
+          class="w-14 h-14 sm:w-20 sm:h-20 md:w-28 md:h-28 3xl:w-32 3xl:h-32 rounded-full object-cover"
+          alt="apple logo"
+        />
       </div>
 
       <div
@@ -106,7 +111,12 @@ const currentTab = computed(() => {
       <div
         class="text-right relative before:content-[''] before:w-28 sm:before:w-32 md:before:w-44 lg:before:w-48 xl:before:w-72 3xl:before:w-80 before:border-b before:absolute before:top-1/2 before:border-gray-300 before:right-full"
       >
-        <img :src="results.end.picture" class="w-14 h-14 sm:w-20 sm:h-20 md:w-28 md:h-28 3xl:w-32 3xl:h-32 rounded-full object-cover" alt="profile picture" />
+        <img
+          :src="results.end.picture"
+          loading="lazy"
+          class="w-14 h-14 sm:w-20 sm:h-20 md:w-28 md:h-28 3xl:w-32 3xl:h-32 rounded-full object-cover"
+          alt="profile picture"
+        />
       </div>
     </div>
   </div>
