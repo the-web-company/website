@@ -41,12 +41,6 @@ const links = ref([
         icon: "i-heroicons-user-circle",
         description: "Uncover learnings about your visitors by recognizing them across web and mobile.",
       },
-      // {
-      //   label: "Increase conversion",
-      //   to: "/use-cases/conversion",
-      //   icon: "i-heroicons-arrow-trending-up",
-      //   description: "Accurately recognize visitors and deliver a personalized experience.",
-      // },
     ],
   },
   // { label: "Pricing", to: "/pricing", icon: "i-heroicons-tag" },

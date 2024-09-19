@@ -14,7 +14,6 @@ const menu = [
       { label: "User attribution", to: "/use-cases/attribution" },
       { label: "Fraud", to: "/use-cases/fraud" },
       { label: "Marketing", to: "/use-cases/marketing" },
-      // { label: "Increase conversion", to: "/use-cases/conversion" },
     ],
   },
   {
