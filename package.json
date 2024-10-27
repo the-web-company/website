@@ -19,7 +19,6 @@
     "@nuxtjs/robots": "^4.1.7",
     "@nuxtjs/seo": "^2.0.0-rc.20",
     "@nuxtjs/sitemap": "^6.0.1",
-    "@thewebco/pid": "^1.7.2",
     "@unovis/ts": "^1.4.0",
     "@unovis/vue": "^1.4.0",
     "nuxt": "^3.11.2",
