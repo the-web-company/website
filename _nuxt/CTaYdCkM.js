@@ -1,0 +1,1 @@
+import{e,c as t,f as s}from"./DELbF8Ns.js";import"https://thewebco.cloud/TheWebCo.js";const c={class:"max-w-screen-2xl mx-auto px-4 3xl:px-0 py-10 xl:py-14"},o=s("p",null,"claim",-1),a=[o],m={__name:"claim",setup(_){return(l,n)=>(t(),e("div",c,a))}};export{m as default};

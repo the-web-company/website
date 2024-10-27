@@ -1,0 +1,1 @@
+import{l as o,c as r,e as t,S as s}from"./DELbF8Ns.js";import"https://thewebco.cloud/TheWebCo.js";const c={};function l(e,n){return r(),t("ol",null,[s(e.$slots,"default")])}const _=o(c,[["render",l]]);export{_ as default};

@@ -1,0 +1,1 @@
+import{l as o,c as t,e as r,S as c}from"./DELbF8Ns.js";import"https://thewebco.cloud/TheWebCo.js";const s={};function l(e,n){return t(),r("blockquote",null,[c(e.$slots,"default")])}const u=o(s,[["render",l]]);export{u as default};

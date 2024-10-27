@@ -1,0 +1,1 @@
+import{l as e,e as r,c as t}from"./DELbF8Ns.js";import"https://thewebco.cloud/TheWebCo.js";const c={};function o(n,a){return t(),r("p",null,"platform")}const l=e(c,[["render",o]]);export{l as default};
